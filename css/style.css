@@ -744,6 +744,7 @@ img {
 
 .services {
 	padding-top: 90px;
+	padding-bottom: 20px;
 }
 
 .services--mob .title--mob {
@@ -832,7 +833,7 @@ img {
 	line-height: 1.18;
 	color: #fbfbfb;
 	padding-left: 50px;
-	margin-bottom: 14px;
+	margin-bottom: 40px;
 	font-weight: 400;
 }
 
@@ -1416,10 +1417,6 @@ img {
 .item {
 	overflow: visible;
 	padding: 0 30px;
-}
-
-.no {
-	display: none;
 }
 
 .swiper-wrapper {
