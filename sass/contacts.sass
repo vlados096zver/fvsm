@@ -1,0 +1,82 @@
+@import 'responsive'
+
+.contacts
+	padding-top: 90px	
+	+media(lgxs)
+		padding-top: 30px
+		padding-bottom: 30px
+	&__title
+		font-size: 24px
+		line-height: 1.2
+		color: #afafaf
+		text-transform: uppercase
+		padding-bottom: 45px
+		font-weight: normal
+		+media(sm)
+			font-size: 20px
+			padding-bottom: 30px
+
+	&__email
+		font-size: 60px
+		line-height: 1.2
+		color: #292929
+		padding-bottom: 33px
+		margin-top: 10px
+		+media(md)
+			font-size: 45px
+		+media(sm)
+			font-size: 32px
+
+	&__wrap
+		max-width: 630px
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -15px
+		+media(sm)
+			margin: 0px
+
+	&__item
+		width: calc(50% - 30px)
+		position: relative
+		margin: 0 15px
+		margin-bottom: 50px
+		&:last-child
+			margin-bottom: 64px
+			+media(sm)
+				margin-bottom: 48px
+		+media(sm)
+			width: 100%
+			margin: 0px
+			margin-bottom: 32px
+		
+	&__label
+		position: absolute
+		top: -2px
+		left: 0px
+		font-size: 16px
+		pointer-events: none
+		color: #292929
+		transition: 0.3s
+		&.label-active
+			font-size: 14px
+			top: -20px
+			+media(sm)
+				top: -10px
+
+	&__link
+		display: inline-block
+		font-size: 24px
+		line-height: 1.2
+		color: #292929
+		margin-bottom: 20px
+		+media(sm)
+			margin-bottom: 16px
+
+	&__wrap-error
+		margin-bottom: 15px
+
+	&__fail
+		font-size: 18px
+		color: #8b0000
+		padding-bottom: 17px	
+		font-weight: 400

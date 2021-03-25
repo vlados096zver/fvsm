@@ -1,0 +1,146 @@
+@import 'responsive'
+
+.main-footer
+	background-color: #393e43
+	padding-top: 45px
+	padding-bottom: 70px
+	+media(md)
+		padding-bottom: 5px
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -20px
+		+media(md)
+			margin: 0px
+
+	&__item
+		width: calc(100% / 2 - 40px)
+		margin: 0 20px
+		+media(md)
+			width: 100%
+			margin: 0px
+
+	&__block
+		background-color: #eee
+		padding: 0 28px
+		margin-bottom: 40px
+
+	&__title
+		font-size: 18px
+		line-height: 1.2	
+		color: #393e43
+		text-align: center
+		text-transform: uppercase
+		padding-top: 26px
+		padding-bottom: 12px
+		font-weight: 900
+
+	&__text
+		font-size: 12px
+		text-align: center
+		text-transform: uppercase
+		padding-bottom: 17px
+
+	&__contacts
+		display: flex
+		justify-content: center
+		border-top: 2px solid #a7a7a7
+		padding-top: 20px
+		+media(smx)
+			flex-direction: column
+			align-items: center
+
+	&__data
+		font-size: 16px
+		color: #000000
+		margin-bottom: 24px
+		font-weight: 700
+		&:first-child
+			margin-right: 95px
+			+media(smx)
+				margin-right: 0px
+
+	&__socials
+		display: flex
+		margin: 0 -12px
+		padding-bottom: 20px
+
+	&__box
+		margin: 0 12px
+		margin-bottom: 20px
+		svg
+			width: 30px
+			height: 30px
+			fill: #f2f2f2
+			transition: 0.3s fill
+			&:hover
+				fill: rgba(242, 242, 242, 0.7)
+
+	&__desc
+		p
+			font-size: 14px
+			line-height: 1.7
+			color: #ffffff
+			white-space: pre-line
+			padding-bottom: 2em
+
+	&__holder
+		column-count: 2
+		column-gap: 60px
+		+media(md)
+			column-count: 1
+			column-gap: 0px
+
+	&__col
+		display: inline-block
+		padding-bottom: 30px
+		+media(md)
+			display: block
+
+	&__subtitle
+		display: block
+		font-size: 14px
+		color: #fff
+		text-transform: uppercase
+		padding-bottom: 10px
+		font-weight: 700
+
+	&__elem
+		display: flex
+		flex-direction: column
+		p
+			font-size: 14px
+			line-height: 1.7
+			color: #fff
+			white-space: pre-line
+		a
+			display: inline-block
+			max-width: max-content
+			font-size: 14px
+			color: #fff
+			margin-bottom: 10px
+			transition: 0.3s color
+			&:hover
+				color: rgba(255, 255, 255, 0.7)
+
+.msg-modal
+	position: fixed
+	top: 30%
+	left: calc(50% - 150px)
+	width: 300px
+	padding: 20px 30px
+	border-radius: 15px
+	text-align: center
+	background-color: #75af26
+	color: #fff
+	opacity: 0
+	visibility: hidden
+	font-size: 18px
+	line-height: 1.5
+	border-radius: 5px
+	z-index: 20
+	transition: 0.3s visibility, 0.3s opacity
+	&-active
+		opacity: 1
+		visibility: visible

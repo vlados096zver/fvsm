@@ -1,0 +1,212 @@
+@import 'responsive'
+
+.single
+	padding-right: 60px
+	+media(sm)
+		padding-top: 25px
+	&__block
+		display: flex
+		flex-wrap: wrap
+		margin-bottom: 50px
+
+	&__item
+		&--info
+			width: 445px
+			padding-right: 140px
+			+media(lgm)
+				width: 375px
+				padding-right: 70px
+			+media(mdx)
+				width: 100%
+				padding-right: 0px
+
+		&--desc
+			width: calc(100% - 445px)
+			position: relative
+			+media(lgm)
+				width: calc(100% - 375px)
+			+media(mdx)
+				width: 100%
+				margin-top: 6px
+
+	&__title
+		cursor: pointer
+		display: inline-block
+		position: relative
+		font-size: 60px
+		color: #fbfbfb
+		line-height: 1.2
+		background-repeat: no-repeat
+		background-size: 34px
+		background-position: left center
+		padding-left: 47px
+		text-transform: uppercase
+		margin-bottom: 58px
+		font-weight: 400
+		+media(mdx)
+			margin-bottom: 35px
+		&:after
+			position: absolute
+			content: ' '
+			top: 25px
+			left: 3px
+			width: 20px
+			height: 20px
+			transform: rotate(-45deg)
+			border-left: 4px solid #fbfbfb
+			border-top: 4px solid #fbfbfb
+		+media(mdx)
+			font-size: 32px
+			padding-left: 36px
+			&:after
+				top: 13px
+				width: 14px
+				height: 14px
+				border-left: 2px solid #fbfbfb
+				border-top: 2px solid #fbfbfb
+
+	&__tags
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -16px
+		padding-bottom: 65px
+		+media(mdx)
+			padding-bottom: 40px
+
+	&__link
+		display: inline-block
+		font-size: 16px
+		line-height: 1.2
+		color: #fbfbfb
+		font-weight: normal
+		margin: 0 16px
+		margin-bottom: 8px
+
+	&__row
+		+media(mdx)
+			display: flex
+			flex-wrap: wrap
+			margin: 0 -20px
+		+media(sm)
+			margin: 0px
+
+	&__col
+		position: absolute
+		width: 100%
+		min-width: 160px
+		+media(mdx)
+			position: static
+			width: calc(100% / 2 - 40px)
+			margin: 0 20px
+			margin-bottom: 60px
+
+		+media(sm)
+			width: 100%
+			margin: 0 auto
+			margin-bottom: 60px
+
+		&:first-child
+			max-width: 41%
+			top: 0px
+			left: 0px
+
+		&:nth-child(2)
+			max-width: 25%
+			top: 5%
+			right: 110px
+
+		&:nth-child(3)
+			max-width: 45%
+			bottom: 0px
+			left: 110px
+
+		&:nth-child(4)
+			max-width: 27%
+			bottom: 12%
+			right: 0px
+			+media(lg)
+				bottom: 17%
+
+		&:first-child,
+		&:nth-child(2),
+		&:nth-child(3),
+		&:nth-child(4)
+			+media(mdx)
+				max-width: initial
+			+media(sm)
+				max-width: 450px
+
+		img
+			display: block
+			+media(mdx)
+				width: 100%
+
+	&__text
+		h3
+			position: relative
+			font-size: 24px
+			line-height: 1.2
+			color: #fbfbfb
+			padding-left: 28px
+			padding-bottom: 25px
+			font-weight: normal
+			+media(mdx)
+				font-size: 20px
+				padding-bottom: 17px
+			&:after,
+			&:before
+				position: absolute
+				content: ''
+				background-color: #fbfbfb
+
+			&:after
+				top: 14px
+				left: 0px
+				width: 13px
+				height: 3px
+				+media(mdx)
+					width: 10px
+					height: 2px
+					top: 12px
+
+			&:before
+				top: 9px
+				left: 5px
+				width: 3px
+				height: 13px
+				+media(mdx)
+					left: 4px
+					top: 8px
+					width: 2px
+					height: 10px
+
+		p
+			font-size: 16px
+			line-height: 1.2
+			color: #afafaf
+			padding-bottom: 2em
+			font-weight: 300
+			+media(mdx)
+				font-size: 14px
+
+	&__inner
+		&+button
+			position: static
+			margin-top: -44px
+			+media(mdx)
+				margin-top: 45px
+
+	&__elem
+		margin-bottom: 92px
+		+media(mdx)
+			justify-content: center
+			margin-bottom: 60px
+		&:first-child
+			display: flex
+			justify-content: flex-end
+		&:last-child
+			margin-bottom: 0px
+		img
+			display: block
+			+media(mdx)
+				margin: 0 auto

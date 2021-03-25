@@ -1,0 +1,106 @@
+@import 'responsive'
+
+.about
+	background-repeat: no-repeat
+	background-size: cover
+	background-position: top center
+	background-image: url(../img/bg-about.png)
+	+media(lgxs)
+		padding-top: 25px
+
+	&__row
+		position: relative
+
+	&__wrap
+		display: flex
+		flex-wrap: wrap
+
+	&__item
+		&--content
+			width: 414px
+			+media(lgxs)
+				width: 40%
+			+media(lgxs)
+				width: 100%
+
+		&--block
+			width: calc(100% - 414px)
+			padding-left: 33px
+			padding-top: 295px
+			padding-bottom: 152px
+			+media(lgxs)
+				width: 60%
+				padding-top: 150px
+			+media(lgxs)
+				width: 100%
+				padding-left: 0px
+				padding-top: 245px
+				padding-bottom: 30px
+
+	&__title
+		font-size: 24px
+		line-height: 1.2
+		color: #fbfbfb
+		font-weight: 300
+		+media(lgxs)
+			font-size: 20px
+
+	&__text
+		max-width: 528px
+		+media(lgxs)
+			max-width: 100%
+		p
+			font-size: 16px
+			line-height: 1.2
+			color: #fbfbfb
+			&:not(:last-child)
+				padding-bottom: 1.2em
+
+	&__inner
+		display: flex
+		align-items: center
+		justify-content: space-between
+		margin-bottom: 25px
+		+media(lgxs)
+			position: relative
+			margin-bottom: 65px
+		&--single
+			display: none
+			+media(lgxs)
+				display: flex
+
+	&__logo
+		display: block
+		position: relative
+		z-index: 9
+		max-width: 415px
+		+media(lgxs)
+			max-width: 140px
+		img
+			display: block
+
+	&__menu
+		display: none
+		+media(lgxs)
+			display: block
+
+	&__list
+		display: none
+		width: calc(100% + 60px)
+		top: 100%
+		left: -30px
+		z-index: 8
+		position: absolute
+		padding: 0px
+		padding-left: 30px
+		padding-top: 20px
+		background-color: #101010
+		max-height: calc(100vh - 70px)
+		overflow-y: auto
+		overflow-x: hidden
+
+	&__link
+		display: inline-block
+		font-size: 16px
+		color: #fbfbfb
+		margin-bottom: 15px

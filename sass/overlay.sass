@@ -1,0 +1,95 @@
+@import 'responsive'
+
+.overlay
+	position: fixed
+	top: 0
+	left: 0
+	width: 100%
+	height: 100%
+	background-color: rgba(#000, 0.7)
+	opacity: 0
+	display: flex
+	align-items: center
+	visibility: hidden
+	padding: 10vh 0
+	z-index: 330
+	transition: 0.3s opacity, 0.3s visibility
+
+	&-active
+		opacity: 1
+		visibility: visible
+
+	&-close
+		display: block
+		border: none
+		outline: none
+		position: absolute
+		top: 0px
+		right: -60px
+		width: 30px
+		height: 30px
+		cursor: pointer
+		background-color: transparent
+		padding: 0px
+		z-index: 1
+		+media(sm)
+			top: 25px
+			right: 30px	
+
+		&:after,
+		&:before
+			content: ''
+			position: absolute
+			top: 14px
+			left: 1px
+			width: 30px
+			height: 2px
+			background-color: #afafaf
+			transition: 0.3s background-color
+
+		&:after
+			transform: rotate(45deg)
+		&:before
+			transform: rotate(-45deg)
+
+		&:hover
+			&:after,
+			&:before
+				background-color: #fff
+
+	&__subtitle
+		font-size: 24px
+		line-height: 1.2
+		color: #afafaf
+		text-transform: uppercase
+		padding-bottom: 46px
+		font-weight: normal
+
+	.contacts__label
+		color: #afafaf
+
+	.btn--send
+		border-color: #afafaf
+		background-color: transparent
+		color: #afafaf
+		margin-bottom: 0px
+
+
+
+	
+.inner
+	&-overlay
+		position: relative
+		margin: 0 auto
+		max-width: 750px
+		
+	&__box
+		overflow: auto
+		overflow-x: hidden
+		background-color: #101010
+		max-height: 80vh
+		padding: 64px
+		+media(md)
+			padding: 25px 40px
+		+media(sm)
+			padding: 25px 20px

@@ -1,0 +1,85 @@
+@import 'responsive'
+
+.photo
+	position: relative
+	padding-top: 90px
+	padding-bottom: 0px
+	+media(lgxs)
+		padding-top: 68px
+	&__wrap
+		position: relative
+		z-index: 3
+		display: flex
+		flex-wrap: wrap
+		margin: 0 -65px
+		+media(lgm)
+			margin: 0 -40px
+		+media(mdx)
+			margin: 0px
+			padding-top: 27px
+
+	&__item
+		width: calc(100% / 3 - 130px)
+		margin: 0 65px
+		+media(lgm)
+			width: calc(100% / 3 - 80px)
+			margin: 0 40px
+		+media(mdx)
+			width: 100%
+			max-width: 550px
+			margin: 0px auto
+
+		&:nth-child(3n+1)
+			margin-top: 100px
+			+media(mdx)
+				margin-top: 0px
+
+		&:nth-child(3n+3)
+			margin-top: 230px
+			+media(mdx)
+				margin-top: 0px
+
+	&__image
+		display: block
+		margin-bottom: 130px
+		+media(mdx)
+			margin-bottom: 60px
+		&:last-child
+			margin-bottom: 60px
+		img
+			display: block
+			width: 100%
+			+media(sm)
+				width: auto
+				margin: 0 auto
+
+	&__holder
+		position: relative
+
+	&__box
+		position: absolute
+		z-index: 3
+		top: 0px
+		width: 100%
+		height: 100%
+
+	&__title
+		position: relative
+		font-size: 60px
+		line-height: 1.2
+		color: #fbfbfb
+		padding-left: 47px
+		&:after
+			position: absolute
+			content: ' '
+			top: 25px
+			left: 3px
+			width: 20px
+			height: 20px
+			transform: rotate(-45deg)
+			border-left: 4px solid #fbfbfb
+			border-top: 4px solid #fbfbfb
+			+media(lgm)
+				top: 17px
+			+media(lgxs)
+				display: none

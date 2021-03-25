@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Fashion VS Marketing — маркетингова агенція для фешн брендів.</title>
+
+	<link rel="stylesheet" href="fonts/fonts.css">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<div class="circle-cursor circle-cursor__inner"></div>
+<div class="circle-cursor circle-cursor__outer"></div>
+
+<div class="holder">
+
+	<div class="wrap" id="slider">
+		<div class="swiper-wrapper">
+			<section class="about item swiper-slide">
+				<div class="container">
+					<div class="about__row">
+						<div class="about__wrap">
+							<div class="about__item about__item--content">
+								<div class="about__inner">
+									<div class="about__logo">
+										<img src="img/icons/logo.svg" alt="">
+									</div>
+									<div class="about__menu">
+										<div class="mobile-wrap">
+									        <div class="main-nav__toggle">
+									            <span class="line-burger"></span>
+									        </div>
+									    </div>
+									    <ul class="about__list">
+									        <li>
+									          <a class="about__link main-header__link--active hover__block" href="#about" data-index="0">Про проект</a>
+									        </li>
+									        <li>
+									         <a class="about__link hover__block" href="#services"  data-index="1">Послуги</a>
+									        </li>
+									        <li>
+									          <a class="about__link hover__block" href="#photo"  data-index="2">Портфоліо</a>
+									        </li>
+									        <li>
+									          <a class="about__link hover__block" href="#contacts"  data-index="3">Контакти</a>
+									        </li>
+									    </ul>
+								    </div>
+								</div><!--end about__inner-->
+								
+								<h3 class="about__title" >FVSM  — маркетингова агенція для фешн брендів.</h3>
+							</div>
+							<div class="about__item about__item--block">
+								<div class="about__text">
+									<p>Привіт, ми FVSM і ми зробимо так що твій продукт впізнаватимуть та купуватимуть.  Наша місія показати, що поняття маркетинг і фешн нероздільні, що будь-який бізнес повинен мати чітку структуру, системність та план розвитку для того щоб рости та бути успішним.</p>
+
+			                       <p>Ми займаємося створенням і просуванням брендів одягу, взуття, предметного дизайну, аксесуарів та косметичної продукції.</p>
+								</div>
+							</div>
+						</div><!--end about__wrap-->
+						<button class="btn btn--decor"></button>
+					</div>
+				</div>
+			</section>
+
+			<section class="services item swiper-slide">
+				<div class="container">
+					<h3 class="title--mob">Послуги</h3>
+					<div class="services__user">
+						<div class="services__wrap">
+							<div class="services__box">
+								<ul class="services__list">
+									<li><a href="" class="services__link hover__block" style="background-image: url(img/icons/brend.png)">Бренд стратегія</a></li>
+									<li><a href="" class="services__link hover__block" style="background-image: url(img/icons/shop.png)">Онлайн магазин</a></li>
+									<li><a href="" class="services__link hover__block" style="background-image: url(img/icons/marketing.png)">Аутсорс відділ маркетінгу</a></li>
+									<li><a href="" class="services__link hover__block" style="background-image: url(img/icons/media.png)">Фото та видео продакшн</a></li>
+								</ul>
+							</div>
+							<div class="services__box services__box--content">
+								<ul>
+									<li>кастомізований дизайн</li>
+									<li>верстка</li>
+									<li>модерація</li>
+									<li>підключення платіжної системи</li>
+									<li>інтеграція системи обліку та систем збору інформації </li>
+								</ul>
+								<button class="btn btn--details hover__block">Дізнатись більше</button>
+							</div>
+						</div><!--end services__wrap-->
+
+
+					</div><!--end services__user-->
+				</div>
+			</section>
+
+			<section class="photo item swiper-slide">
+				<div class="container">
+					<h3 class="title--mob">Портфолио</h3>
+					<div class="photo__wrap">
+						<div class="photo__item">
+							<a href="" class="photo__image hover__block" >
+								<img src="img/photo-1.png" alt="">
+							</a>
+						</div>
+						<div class="photo__item">
+							<a href="" class="photo__image hover__block" >
+								<img src="img/photo-2.png" alt="">
+							</a>
+							<a href="" class="photo__image hover__block" >
+								<img src="img/photo-3.png" alt="">
+							</a>
+						</div>
+						<div class="photo__item">
+							<a href="" class="photo__image hover__block" >
+								<img src="img/photo-4.png" alt="">
+							</a>
+						</div>
+					</div><!--end photo__wrap-->
+				</div>
+			</section>
+
+			<section class="contacts item swiper-slide">
+				<div class="container">
+					<h4 class="contacts__title">Зв’язатись з нами</h4>
+					<p class="contacts__email">hello.fvsm@gmail.com</p>
+					<form action="">
+						<div class="contacts__wrap-error">
+							<p class="contacts__fail contacts__fail-name" style="display: none">Некоректне ім'я</p>
+							<p class="contacts__fail contacts__fail-phone" style="display: none">Некоректний номер телефону</p>
+						</div>
+						<div class="contacts__wrap">
+							<div class="contacts__item">
+								<input type="text" class="input" id="c_name">
+								<label for="c_name" class="contacts__label">Ім’я*</label>
+							</div>
+							<div class="contacts__item">
+								<input type="tel" class="input" id="c_phone">
+								<label for="c_phone" class="contacts__label">Телефон*</label>
+							</div>
+							<div class="contacts__item">
+								<input type="text" class="input" id="c_email">
+								<label for="c_email" class="contacts__label">Email</label>
+							</div>
+						</div>
+						<button id="btn--send" class="btn btn--send hover__block">Передзвоніть мені</button>
+					</form>
+					<h4 class="contacts__title">Слідкувати за нами</h4>
+					
+					<ul class="contacts__list">
+						<li>
+							<a href="" class="contacts__link hover__block">Instagram</a>
+						</li>
+						<li>
+							<a href="" class="contacts__link hover__block">Facebook</a>
+						</li>
+					</ul>
+				</div>
+			</section>
+		</div>
+		
+	</div>
+	
+	<div class="aside">
+		<ul class="aside__list">
+			<li class="aside__link aside__link--active hover__block" data-number="0">Про проект</li>
+			<li class="aside__link hover__block" data-number="1">Послуги</li>
+			<li class="aside__link hover__block" data-number="2">Портфолио</li>
+			<li class="aside__link hover__block" data-number="3">Контакты</li>
+		</ul>
+	</div>
+	
+	
+</div>
+
+<div class="overlay overlay-request">
+	<div class="inner-overlay">
+		<button class="overlay-close hover__block"></button>
+		<div class="inner__box">  
+		    <h3 class="overlay__subtitle">Зв’язатись з нами</h3>
+		    <form action="">
+				<div class="contacts__wrap-error">
+					<p class="contacts__fail contacts__fail-name" style="display: none">Некоректне ім'я</p>
+					<p class="contacts__fail contacts__fail-phone" style="display: none">Некоректний номер телефону</p>
+				</div>
+				<div class="contacts__wrap">
+					<div class="contacts__item">
+						<input type="text" class="input input--popup" id="p_name">
+						<label for="p_name" class="contacts__label">Ім’я*</label>
+					</div>
+					<div class="contacts__item">
+						<input type="tel" class="input input--popup" id="p_phone">
+						<label for="p_phone" class="contacts__label">Телефон*</label>
+					</div>
+					<div class="contacts__item">
+						<input type="text" class="input input--popup" id="p_email">
+						<label for="p_email" class="contacts__label">Email</label>
+					</div>
+				</div>
+				<button id="btn--popup" class="btn btn--send hover__block">Передзвоніть мені</button>
+			</form>
+	    </div>
+	</div>
+</div>
+
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>
