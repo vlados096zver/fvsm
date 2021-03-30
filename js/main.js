@@ -79,7 +79,6 @@ $(document).ready(function() {
         });
 
         $('.single__arrow--dir_right').on('click', function() {
-          //$('.single__row').slick('slickNext');
           sliderGallery.slideNext();
         });
 
