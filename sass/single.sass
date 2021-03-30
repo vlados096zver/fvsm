@@ -83,12 +83,21 @@
 		margin-bottom: 8px
 
 	&__row
+		position: relative
+		height: 100%
 		+media(mdx)
 			display: flex
 			flex-wrap: wrap
 			margin: 0 -20px
 		+media(sm)
 			margin: 0px
+		.swiper-wrapper
+			+media(mdx)
+				flex-direction: column
+				
+		.swiper-slide
+			+media(mdx)
+				flex-shrink: initial
 
 	&__col
 		position: absolute
@@ -210,3 +219,49 @@
 			display: block
 			+media(mdx)
 				margin: 0 auto
+
+	&__content
+		outline: none
+
+
+	&__arrow
+		position: absolute
+		z-index: 5
+		top: 0px
+		right: 0px
+		display: block
+		cursor: pointer
+		outline: none
+		border: none
+		background-color: transparent
+		width: 40px
+		height: 40px
+		padding: 0px
+		transition: 0.3s border
+		+media(mdx)
+			display: none
+		&:after
+			position: absolute
+			content: ' '
+			width: 20px
+			height: 20px
+			top: calc(50% - 10px)
+			left: calc(50% - 12px)
+			border-right: 2px solid #616161
+			border-bottom: 2px solid #616161
+			transform: rotate(-45deg)
+			transition: 0.3s border
+
+		&:before
+			position: absolute
+			z-index: 2
+			content: ' '
+			top: 18px
+			left: 4px
+			width: 24px
+			height: 2px
+			background-color: #616161
+		+media(sm)
+			display: none
+		&:hover:after
+			border-color: #014659s
