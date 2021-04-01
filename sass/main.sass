@@ -137,6 +137,7 @@ img
 	width: 100%
 	border: none
 	border-bottom: 1px solid #292929
+	border-radius: 0px
 	padding: 5px 0
 	&--popup
 		background-color: transparent
@@ -171,7 +172,7 @@ img
 	padding: 11px 5px
 	padding-bottom: 12px
 	border-radius: 2px
-	font-weight: 700
+	font-weight: normal
 	transition: 0.3s background-color, 0.3s color, 0.3s border
 	&--details
 		max-width: 160px
@@ -238,9 +239,10 @@ img
 
 	&--order
 		position: absolute
+		z-index: 1
 		bottom: 0px
 		right: 0px
-		background-color: transparent
+		background-color: #101010
 		max-width: 140px
 		color: #afafaf
 		border-color: #afafaf

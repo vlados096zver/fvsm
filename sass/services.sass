@@ -36,11 +36,14 @@
 			width: 100%
 			margin: 0px
 
+		&--tabs
+			+media(lgxs)
+				display: none
+
 		&--content
 			display: flex
 			flex-direction: column
-			+media(lgxs)
-				display: none
+			
 			ul li
 				position: relative
 				font-size: 24px
@@ -56,6 +59,9 @@
 					top: -3px
 					left: 0px
 					color: #292929
+
+		&--hidden
+			display: none
 
 	&__list
 		display: flex
@@ -84,6 +90,12 @@
 			padding-left: 60px
 			background-size: 30px
 			margin-bottom: 20px
+
+		&--active
+			text-decoration: underline
+			+media(lgxs)
+				text-decoration: none
+
 		&:hover
 			text-decoration: underline
 			text-decoration-skip-ink: none
@@ -218,20 +230,20 @@
 
 		&--brend
 			+media(lgxs)
-				background-image: url(../img/icons/brend.png)
+				background-image: url(img/icons/brend.png)
 
 		&--shop
 			+media(lgxs)
-				background-image: url(../img/icons/shop.png)
+				background-image: url(img/icons/shop.png)
 
 
 		&--marketing
 			+media(lgxs)
-				background-image: url(../img/icons/marketing.png)
+				background-image: url(img/icons/marketing.png)
 
 		&--media
 			+media(lgxs)
-				background-image: url(../img/icons/media.png)
+				background-image: url(img/icons/media.png)
 
 
 	&__text
