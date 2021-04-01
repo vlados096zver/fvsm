@@ -167,11 +167,11 @@ $(document).ready(function () {
     
     }
     
-    swiper.on('slideChange', function() {
+    /*swiper.on('slideChange', function() {
         var location = window.location.origin;
         var url = $('.swiper-slide:eq(' + swiper.activeIndex + ')').data('url');
         history.replaceState(null, '', location + '/' + url);    
-    });
+    });*/
 
     $('.services__link').on('click', function() {
         var tab = $(this).data('tab');
