@@ -7,12 +7,14 @@
 	pointer-events: none
 	border-radius: 50%
 	transition: background-color 300ms
+	+media(lgxs)
+		display: none
 	&__inner
 		width: 5px
 		height: 5px
 		left: -2.5px
 		top: -2.5px
-		z-index: 11000
+		z-index: 10
 		background-color: #808080
 		&.circle-cursor__hover
 			background-color: #808080
@@ -23,6 +25,17 @@
 		left: -15px
 		top: -15px
 		border: 1px solid #808080
-		z-index: 12000
+		z-index: 11
 		&.circle-cursor__hover
 			background-color: #808080
+
+#text
+	position: fixed
+	z-index: 12
+	top: -9px
+	left: 0px
+	font-size: 16px
+	color: #000
+	text-transform: none
+	transition: opacity 0.3s
+	pointer-events: none

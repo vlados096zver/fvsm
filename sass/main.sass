@@ -11,8 +11,10 @@ body
 	line-height: 1.2
 	font-weight: normal
 	font-style: normal
-	font-family: "RobotoCondensed"
+	font-family: "Roboto Condensed"
 	box-sizing: border-box
+	+media(lgxs)
+		cursor: default !important
 
 *
 	box-sizing: border-box
@@ -150,6 +152,35 @@ img
 	&.form-done
 		border-color: #90ee90
 
+.сhange--mode
+	.item
+		background-color: #101010
+
+	.services__link, .aside__link,
+	.services__box--content ul li
+		color: #fbfbfb
+		&:after
+			color: inherit
+
+	.btn--details, .btn--send
+		color: #afafaf
+		border-color: #afafaf
+		background-color: transparent
+
+	.contacts__title
+		color: #616161
+
+	.contacts__email, .contacts__label
+		color: #fbfbfb
+
+	.contacts__link
+		color: #fbfbfb
+
+	.input
+		background-color: transparent
+		border-color: #fbfbfb
+		color: #fbfbfb
+
 .title
 	font-size: 36px
 	color: #41307e
@@ -207,7 +238,7 @@ img
 
 	&--decor
 		position: absolute
-		bottom: -20px
+		bottom: 20px
 		right: -64px
 		width: 40px
 		height: 40px

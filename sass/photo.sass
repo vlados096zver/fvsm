@@ -15,6 +15,7 @@
 		+media(lgm)
 			margin: 0 -40px
 		+media(mdx)
+			flex-direction: column
 			margin: 0px
 			padding-top: 27px
 
@@ -25,8 +26,8 @@
 			width: calc(100% / 3 - 80px)
 			margin: 0 40px
 		+media(mdx)
-			width: 100%
-			max-width: 550px
+			width: auto
+			//max-width: 550px
 			margin: 0px auto
 
 		&:nth-child(3n+1)
@@ -43,15 +44,23 @@
 		display: block
 		margin-bottom: 130px
 		+media(mdx)
+			transform: translateY(-30px)
+			overflow: hidden
 			margin-bottom: 60px
 		&:last-child
 			margin-bottom: 60px
+		&:hover	
+			cursor: none !important
 		img
 			display: block
 			width: 100%
-			+media(sm)
+			+media(mdx)
 				width: auto
 				margin: 0 auto
+		&--animation
+			+media(mdx)
+				animation: show .5s ease-out forwards
+				animation-delay: 0.3s
 
 	&__holder
 		position: relative
@@ -83,3 +92,7 @@
 				top: 17px
 			+media(lgxs)
 				display: none
+
+@keyframes show
+	to
+		transform: translateY(0)

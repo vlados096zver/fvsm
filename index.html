@@ -5,15 +5,20 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Fashion VS Marketing — маркетингова агенція для фешн брендів.</title>
 
-	<link rel="stylesheet" href="fonts/fonts.css">
+	<!--<link rel="stylesheet" href="fonts/fonts.css">-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
 	<link rel="stylesheet" href="css/style.css">
 </head>
+
 
 <body>
 
 <div class="circle-cursor circle-cursor__inner"></div>
 <div class="circle-cursor circle-cursor__outer"></div>
+
+<div id="text"></div>
 
 <div class="holder">
 
@@ -35,19 +40,19 @@
 									        </div>
 									    </div>
 									    <ul class="about__list">
-									        <li>
-									          <a class="about__link main-header__link--active hover__block" href="#about" data-index="0">Про проект</a>
-									        </li>
-									        <li>
-									         <a class="about__link hover__block" href="#services"  data-index="1">Послуги</a>
-									        </li>
-									        <li>
-									          <a class="about__link hover__block" href="#photo"  data-index="2">Портфоліо</a>
-									        </li>
-									        <li>
-									          <a class="about__link hover__block" href="#contacts"  data-index="3">Контакти</a>
-									        </li>
-									    </ul>
+											<li>
+												<a class="about__link hover__block" href="">Про проект</a>
+											</li>
+											<li>
+												<a class="about__link hover__block" href="">Послуги</a>
+											</li>
+											<li>
+												 <a class="about__link hover__block" href="">Портфоліо</a>
+											</li>
+											<li>
+												<a class="about__link hover__block" href="">Контакти</a>
+											</li>
+										</ul>
 								    </div>
 								</div><!--end about__inner-->
 								
@@ -135,21 +140,21 @@
 					<h3 class="title--mob">Портфолио</h3>
 					<div class="photo__wrap">
 						<div class="photo__item">
-							<a href="" class="photo__image hover__block" >
+							<a href="" class="photo__image hover__block" data-text="подпись 1">
 								<img src="img/photo-1.png" alt="">
 							</a>
 						</div>
 						<div class="photo__item">
-							<a href="" class="photo__image hover__block" >
+							<a href="" class="photo__image hover__block" data-text="подпись 2">
 								<img src="img/photo-2.png" alt="">
 							</a>
-							<a href="" class="photo__image hover__block" >
+							<a href="" class="photo__image hover__block" data-text="подпись 3">
 								<img src="img/photo-3.png" alt="">
 							</a>
 						</div>
 						<div class="photo__item">
-							<a href="" class="photo__image hover__block" >
-								<img src="img/photo-4.png" alt="">
+							<a href="" class="photo__image hover__block" data-text="подпись 4">
+								<img src="img/photo-4.png" alt="" >
 							</a>
 						</div>
 					</div><!--end photo__wrap-->

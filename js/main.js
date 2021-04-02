@@ -15,48 +15,57 @@ $(document).ready(function () {
     
     function customCursor() {
     
+       const text = document.getElementById("text");
         const cursorInner = document.querySelector('.circle-cursor__inner');
         const cursorOuter = document.querySelector('.circle-cursor__outer');
-    
+
         let mx = window.innerWidth / 2;
         let my = window.innerHeight / 2;
         let cxi = mx,
-            cyi = my,
-            cxo = mx,
-            cyo = my;
-    
+          cyi = my,
+          cxo = mx,
+          cyo = my;
+
         window.addEventListener('mousemove', (event) => {
-            mx = event.clientX;
-            my = event.clientY;
+          mx = event.clientX;
+          my = event.clientY; 
         });
-    
+
         function update() {
-            const dxi = (mx - cxi) * 0.2;
-            const dyi = (my - cyi) * 0.2;
-            cxi += dxi;
-            cyi += dyi;
-    
-            const dxo = (mx - cxo) * 0.07;
-            const dyo = (my - cyo) * 0.07;
-            cxo += dxo;
-            cyo += dyo;
-    
-            cursorOuter.style.transform = `translate(${cxo}px, ${cyo}px)`;
-            cursorInner.style.transform = `translate(${cxi}px, ${cyi}px)`;
-    
-            requestAnimationFrame(update);
+          const dxi = (mx - cxi) * 0.2;
+          const dyi = (my - cyi) * 0.2;
+          
+          cxi += dxi;
+          cyi += dyi;
+
+          const dxo = (mx - cxo) * 0.07;
+          const dyo = (my - cyo) * 0.07;
+          cxo += dxo;
+          cyo += dyo;
+
+          cursorOuter.style.transform = `translate(${cxo}px, ${cyo}px)`;
+          cursorInner.style.transform = `translate(${cxi}px, ${cyi}px)`;
+          
+          text.style.transform = `translate(${cxo}px, ${cyo}px)`;
+          
+          requestAnimationFrame(update);
         }
-    
+
         requestAnimationFrame(update);
     
         document.body.addEventListener('mouseover', (event) => {
-            if (!event.target.closest('.hover__block')) return;
+            const image = event.target.closest('.hover__block');
+            if(!image) return;
+            text.textContent = image.dataset.text;
+            text.style.opacity = 1;
             cursorInner.classList.add('circle-cursor__hover');
             cursorOuter.classList.add('circle-cursor__hover');
         });
     
         document.body.addEventListener('mouseout', (event) => {
-            if (!event.target.closest('.hover__block')) return;
+            const image = event.target.closest('.hover__block');
+            if(!image) return;
+            text.style.opacity = 0;
             cursorInner.classList.remove('circle-cursor__hover');
             cursorOuter.classList.remove('circle-cursor__hover');
         });
@@ -257,6 +266,132 @@ $(document).ready(function () {
     };
     
     $('input[type="tel"]').mask("+38 (999) 999-99-99");
+
+if ($('.photo__wrap').length) {
+    // Получаем нужный элемент
+    var element = document.querySelector('.photo__image');
+    var isResizeble = false;
+     let elems = document.querySelectorAll('.photo__image');
+
+    var Visible = function(target) {
+      // Все позиции элемента
+      var targetPosition = {
+          top: window.pageYOffset + target.getBoundingClientRect().top,
+          left: window.pageXOffset + target.getBoundingClientRect().left,
+          right: window.pageXOffset + target.getBoundingClientRect().right,
+          bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+        },
+        // Получаем позиции окна
+        windowPosition = {
+          top: window.pageYOffset,
+          left: window.pageXOffset,
+          right: window.pageXOffset + document.documentElement.clientWidth,
+          bottom: window.pageYOffset + document.documentElement.clientHeight
+        };
+
+
+
+      if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+        targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+        targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+        targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+        // Если элемент полностью видно, то запускаем следующий код
+
+        console.log('Вы видите элемент :)');
+         target.classList.add('photo__image--animation');
+
+        if (!isResizeble) {
+          //  ф-ция которая, отработает 1 раз и все
+
+          isResizeble = true;
+              
+        
+        } else {
+          // Если элемент не видно, то запускаем этот код
+          
+
+        }
+      } else {
+         target.classList.remove('photo__image--animation');
+      }
+
+
+    }
+
+    // Запускаем функцию при прокрутке страницы
+    window.addEventListener('scroll', function() {
+       for(let elem of elems ) {
+          Visible(elem);
+        }
+    });
+
+    // А также запустим функцию сразу. А то вдруг, элемент изначально видно
+    for(let elem of elems ) {
+          Visible(elem);
+        }
+
+  }
+
+/*
+   if ($('.photo__wrap').length) {
+    // Получаем нужный элемент
+    var element = document.querySelector('.photo__image');
+    var isResizeble = false;
+     let elems = document.querySelectorAll('.photo__image');
+
+    var Visible = function(target) {
+      // Все позиции элемента
+      var targetPosition = {
+          top: window.pageYOffset + target.getBoundingClientRect().top,
+          left: window.pageXOffset + target.getBoundingClientRect().left,
+          right: window.pageXOffset + target.getBoundingClientRect().right,
+          bottom: window.pageYOffset + target.getBoundingClientRect().bottom
+        },
+        // Получаем позиции окна
+        windowPosition = {
+          top: window.pageYOffset,
+          left: window.pageXOffset,
+          right: window.pageXOffset + document.documentElement.clientWidth,
+          bottom: window.pageYOffset + document.documentElement.clientHeight
+        };
+
+
+
+      if (targetPosition.bottom > windowPosition.top && // Если позиция нижней части элемента больше позиции верхней чайти окна, то элемент виден сверху
+        targetPosition.top < windowPosition.bottom && // Если позиция верхней части элемента меньше позиции нижней чайти окна, то элемент виден снизу
+        targetPosition.right > windowPosition.left && // Если позиция правой стороны элемента больше позиции левой части окна, то элемент виден слева
+        targetPosition.left < windowPosition.right) { // Если позиция левой стороны элемента меньше позиции правой чайти окна, то элемент виден справа
+        // Если элемент полностью видно, то запускаем следующий код
+
+        console.log('Вы видите элемент :)');
+
+        if (!isResizeble) {
+          //  ф-ция которая, отработает 1 раз и все
+
+          isResizeble = true;
+          for(let elem of elems ) {
+                elem.classList.add('photo__image--animation');
+            }
+        } else {
+          // Если элемент не видно, то запускаем этот код
+
+
+        }
+      }
+
+
+    }
+
+    // Запускаем функцию при прокрутке страницы
+    window.addEventListener('scroll', function() {
+      Visible(element);
+    });
+
+    // А также запустим функцию сразу. А то вдруг, элемент изначально видно
+    Visible(element);
+
+  }
+*/
     
     var regName = /^[a-zA-Zа-яА-ЯёЁІі]+/;
     var regPhone = /[_]/i;

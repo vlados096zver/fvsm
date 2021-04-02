@@ -10,6 +10,7 @@
 
 	&__row
 		position: relative
+		padding-bottom: 40px
 
 	&__wrap
 		display: flex
@@ -53,6 +54,7 @@
 			font-size: 16px
 			line-height: 1.2
 			color: #fbfbfb
+			font-weight: 300
 			&:not(:last-child)
 				padding-bottom: 1.2em
 
@@ -92,15 +94,19 @@
 		z-index: 8
 		position: absolute
 		padding: 0px
-		padding-left: 30px
-		padding-top: 20px
+		padding-top: 10px
 		background-color: #101010
 		max-height: calc(100vh - 70px)
 		overflow-y: auto
 		overflow-x: hidden
-
+		li:not(:last-child)
+			.about__link
+				border-bottom: 1px solid #fff
+				
 	&__link
-		display: inline-block
+		display: block
 		font-size: 16px
 		color: #fbfbfb
-		margin-bottom: 15px
+		padding: 12px 0
+		padding-left: 30px
+	
