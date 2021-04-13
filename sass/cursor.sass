@@ -17,7 +17,7 @@
 		z-index: 10
 		background-color: #808080
 		&.circle-cursor__hover
-			background-color: #808080
+			opacity: 0
 
 	&__outer
 		width: 30px
@@ -28,14 +28,21 @@
 		z-index: 11
 		&.circle-cursor__hover
 			background-color: #808080
+			opacity: 0.7
 
 #text
 	position: fixed
 	z-index: 12
 	top: -9px
 	left: 0px
-	font-size: 16px
-	color: #000
-	text-transform: none
-	transition: opacity 0.3s
+	color: #101010
+	max-width: 250px
 	pointer-events: none
+	text-transform: uppercase
+
+	.text--title
+		font-size: 36px
+
+	.text--tags
+		font-size: 16px
+

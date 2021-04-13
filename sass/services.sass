@@ -18,7 +18,7 @@
 
 	&__wrap
 		display: flex
-		margin: 0 -70px
+		margin: 0 -50px
 		transition: 0.3s transform
 		+media(lgs)
 			margin: 0 -30px
@@ -27,8 +27,8 @@
 
 
 	&__box
-		width: calc(50% - 140px)
-		margin: 0 70px
+		width: calc(60% - 100px)
+		margin: 0 50px
 		+media(lgs)
 			width: calc(50% - 60px)
 			margin: 0 30px
@@ -38,6 +38,11 @@
 
 		&--tabs
 			+media(lgxs)
+				display: none
+
+		&--aside
+			width: calc(40% - 100px)
+			+media(md)
 				display: none
 
 		&--content
@@ -84,14 +89,11 @@
 		text-decoration: none
 		padding: 5px 0
 		padding-left: 100px
-		margin-right: 25px
 		margin-bottom: 45px
 		transition: 0.3s color
-		+media(lb)
-			font-size: 42px
 		+media(lgs)
-			font-size: 35px
-		+media(lgxs)
+			font-size: 42px
+		+media(md)
 			font-size: 32px
 			padding-left: 60px
 			background-size: 30px
@@ -99,6 +101,7 @@
 
 		&--active
 			text-decoration: underline
+			text-decoration-skip-ink: none
 			+media(lgxs)
 				text-decoration: none
 

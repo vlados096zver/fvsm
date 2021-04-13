@@ -7,9 +7,9 @@
 
 	<!--<link rel="stylesheet" href="fonts/fonts.css">-->
 	<link rel="preconnect" href="https://fonts.gstatic.com">
-	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="style.css">
 </head>
 
 
@@ -18,19 +18,31 @@
 <div class="circle-cursor circle-cursor__inner"></div>
 <div class="circle-cursor circle-cursor__outer"></div>
 
-<div id="text"></div>
-
+<div id="text">
+	<div class="text--title"></div>
+	<p class="text--tags"></p>
+</div>
+<style>
+	.swiper-slide.about {
+		background-image: url(img/bg-about.png);
+	}
+	@media screen and (max-width: 960px) {
+		.swiper-slide.about {
+			background-image: url(img/bg-about-white.jpg);
+		}
+	}
+</style>
 <div class="holder">
 
 	<div class="wrap" id="slider">
 		<div class="swiper-wrapper">
-			<section class="about item swiper-slide" style="background-image: url(img/bg-about.png);">
+			<section class="about item swiper-slide">
 				<div class="container">
 					<div class="about__row">
-						<div class="about__wrap">
+						<div class="about__wrap about__wrap--white">
 							<div class="about__item about__item--content">
 								<div class="about__inner">
-									<div class="about__logo">
+									<div class="about__logo" data-white="img/icons/logo.svg" data-black="img/icons/logo-black.svg">
 										<img src="img/icons/logo.svg" alt="">
 									</div>
 									<div class="about__menu">
@@ -84,7 +96,7 @@
 									<li><a href="" class="services__link hover__block" style="background-image: url(img/icons/media.png)" data-tab="45">Фото та видео продакшн</a></li>
 								</ul>
 							</div>
-							<div class="services__box">
+							<div class="services__box services__box--aside">
                             	<div class="services__box--content tab-42">
                             		<ul>
 										<li>аналіз сегмента ринку і конкуренті</li>
@@ -140,21 +152,21 @@
 					<h3 class="title--mob">Портфолио</h3>
 					<div class="photo__wrap">
 						<div class="photo__item">
-							<a href="" class="photo__image hover__block" data-text="подпись 1">
-								<img src="img/photo-1.png" alt="">
+							<a href="" class="photo__image photo__image--portrait hover__block" data-title="Ire" data-tag="#strategy #production #onlinestore #pr">
+								<img src="img/photo-33.png" alt="">
 							</a>
 						</div>
 						<div class="photo__item">
-							<a href="" class="photo__image hover__block" data-text="подпись 2">
-								<img src="img/photo-2.png" alt="">
+							<a href="" class="photo__image photo__image--album hover__block" data-title="FVSM" data-tag="#production">
+								<img src="img/photo-42.png" alt="">
 							</a>
-							<a href="" class="photo__image hover__block" data-text="подпись 3">
-								<img src="img/photo-3.png" alt="">
+							<a href="" class="photo__image photo__image--portrait hover__block" data-title="C.icon" data-tag="#strategy #production #onlinestore">
+								<img src="img/photo-18.png" alt="">
 							</a>
 						</div>
 						<div class="photo__item">
-							<a href="" class="photo__image hover__block" data-text="подпись 4">
-								<img src="img/photo-4.png" alt="" >
+							<a href="" class="photo__image photo__image--portrait hover__block" data-title="Malva Florea" data-tag="#onlinestore">
+								<img src="img/photo-31.png" alt="" >
 							</a>
 						</div>
 					</div><!--end photo__wrap-->

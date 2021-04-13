@@ -3,64 +3,96 @@
 .photo
 	position: relative
 	padding-top: 90px
+	padding-right: 65px
 	padding-bottom: 0px
 	+media(lgxs)
-		padding-top: 68px
+		padding-top: 28px
 	&__wrap
 		position: relative
 		z-index: 3
 		display: flex
 		flex-wrap: wrap
-		margin: 0 -65px
-		+media(lgm)
-			margin: 0 -40px
+		padding-top: 30px
+		margin: 0 -10px
 		+media(mdx)
 			flex-direction: column
 			margin: 0px
-			padding-top: 27px
+			padding: 27px 20px 0
 
 	&__item
-		width: calc(100% / 3 - 130px)
-		margin: 0 65px
-		+media(lgm)
-			width: calc(100% / 3 - 80px)
-			margin: 0 40px
+		width: calc(100% / 3 - 20px)
+		margin: 0 10px
+		flex: 1
 		+media(mdx)
 			width: auto
-			//max-width: 550px
-			margin: 0px auto
+		&:last-child
+			flex: 2
+			img
+				margin-left: auto
 
-		&:nth-child(3n+1)
-			margin-top: 100px
-			+media(mdx)
-				margin-top: 0px
+			.photo__image
+				margin-bottom: 55px
 
-		&:nth-child(3n+3)
-			margin-top: 230px
+		&:nth-child(2n+2)
+			margin-top: -75px
 			+media(mdx)
-				margin-top: 0px
+				margin: 0px
+			.photo__image:first-child
+				position: relative
+				left: 110px
+				+media(lgs)
+					left: 50px
+				+media(mdx)
+					left: initial
+
+			
 
 	&__image
 		display: block
-		margin-bottom: 130px
+		margin-bottom: 40px
+		cursor: none
 		+media(mdx)
 			transform: translateY(-30px)
 			overflow: hidden
 			margin-bottom: 60px
+		+media(sm)
+			margin: 0 auto 60px
+
 		&:last-child
+			max-width: 415px
+			margin-left: auto
 			margin-bottom: 60px
+			+media(lgm)
+				max-width: 365px
+			+media(mdx)
+				max-width: initial
+				margin: 0 auto
+				margin-bottom: 60px
+
+
 		&:hover	
 			cursor: none !important
+
 		img
 			display: block
-			width: 100%
+			width: auto
 			+media(mdx)
-				width: auto
 				margin: 0 auto
+
 		&--animation
 			+media(mdx)
+				opacity: 0
 				animation: show .5s ease-out forwards
 				animation-delay: 0.3s
+
+		&--album
+			+media(sm)
+				max-width: 260px
+
+		&--portrait
+			+media(sm)
+				max-width: 170px
+
 
 	&__holder
 		position: relative
@@ -96,3 +128,4 @@
 @keyframes show
 	to
 		transform: translateY(0)
+		opacity: 1

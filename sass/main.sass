@@ -42,7 +42,7 @@ img
 .item
 	position: relative
 	width: 100%
-	height: 100%
+	//height: 100%
 	padding: 50px 175px
 	padding-top: 20vh
 	overflow-y: auto
@@ -119,6 +119,9 @@ img
 
 .holder
 	&.light__mode
+		.aside
+			align-items: flex-start
+			padding-top: 90px
 		.aside__link
 			color: #fbfbfb
 		.aside__link--active
@@ -181,6 +184,9 @@ img
 		border-color: #fbfbfb
 		color: #fbfbfb
 
+	#text
+		color: #fff
+
 .title
 	font-size: 36px
 	color: #41307e
@@ -228,7 +234,7 @@ img
 	&--popup
 		max-width: 120px
 		color: #afafaf
-		background-color: #292929
+		background-color: transparent
 		border-color: #afafaf
 		margin-top: auto
 		margin-left: auto
@@ -238,50 +244,55 @@ img
 
 	&--decor
 		position: absolute
-		bottom: 20px
+		bottom: -50px
 		right: -64px
 		width: 40px
 		height: 40px
 		border: none
 		background-color: transparent
+		background-image: url(img/icons/arrow-right.svg)
+		background-position: center
+		background-repeat: no-repeat
+		background-size: 30px
 		+media(lgxs)
 			display: none
-		&:after
-			content: ''
-			position: absolute
-			top: calc(50% - 1.5px)
-			right: 0
-			width: 40px
-			height: 3px
-			background-color: #fbfbfb
-			transition: 0.3s background-color
+		// &:after
+		// 	content: ''
+		// 	position: absolute
+		// 	top: calc(50% - 1.5px)
+		// 	right: 0
+		// 	width: 40px
+		// 	height: 3px
+		// 	background-color: #fbfbfb
+		// 	transition: 0.3s background-color
 
-		&:before
-			content: ''
-			position: absolute
-			top: calc(50% - 14px)
-			right: 2px
-			width: 28px
-			height: 28px
-			border-top: 3px solid #fbfbfb
-			border-right: 3px solid #fbfbfb
-			transform: rotate(45deg)
-			transition: 0.3s border-color
+		// &:before
+		// 	content: ''
+		// 	position: absolute
+		// 	top: calc(50% - 14px)
+		// 	right: 2px
+		// 	width: 28px
+		// 	height: 28px
+		// 	border-top: 3px solid #fbfbfb
+		// 	border-right: 3px solid #fbfbfb
+		// 	transform: rotate(45deg)
+		// 	transition: 0.3s border-color
 
 	&--order
-		position: absolute
-		z-index: 1
-		bottom: 0px
-		right: 0px
+		//position: absolute
+		//z-index: 1
+		//bottom: 0px
+		//right: 0px
 		background-color: #101010
 		max-width: 140px
+		display: block
 		color: #afafaf
 		border-color: #afafaf
-		margin-top: auto
-		margin-left: auto
-		+media(mdx)
-			position: static
+		//margin-top: auto
+		//margin-left: auto
+		+media(lgm)
+			order: 4
 			margin: 0 auto
-			margin-top: -15px
+			margin-top: 50px
 		+media(xxs)
 			max-width: 100%	

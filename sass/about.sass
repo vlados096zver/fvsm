@@ -5,16 +5,39 @@
 	background-size: cover
 	background-position: top center
 	+media(lgxs)
+		display: flex
 		padding-top: 25px
 		min-height: 100vh
+	+media(md)
+		background-position: center
 
 	&__row
 		position: relative
 		padding-bottom: 40px
+		+media(lgxs)
+			display: flex
+			height: 100%
 
 	&__wrap
 		display: flex
 		flex-wrap: wrap
+		height: 60vh
+		+media(lgxs)
+			height: 100%
+			width: 100%
+
+		&--white
+			.about__list
+				background-color: #fbfbfb
+
+			.about__link
+				color: #292929
+
+			.line-burger
+				background-color: #292929
+				&:after,
+				&:before
+					background-color: #292929
 
 	&__item
 		&--content
@@ -26,17 +49,17 @@
 
 		&--block
 			width: calc(100% - 414px)
+			align-self: flex-end
 			padding-left: 33px
-			padding-top: 295px
-			padding-bottom: 152px
 			+media(lgxs)
 				width: 60%
 				padding-top: 150px
 			+media(lgxs)
 				width: 100%
 				padding-left: 0px
-				padding-top: 245px
+				padding-top: 0
 				padding-bottom: 30px
+				margin-top: auto
 
 	&__title
 		font-size: 24px
@@ -45,16 +68,26 @@
 		font-weight: 300
 		+media(lgxs)
 			font-size: 20px
+		+media(md)
+			color: #292929
+			font-weight: 400
 
 	&__text
 		max-width: 528px
 		+media(lgxs)
 			max-width: 100%
+
 		p
 			font-size: 16px
-			line-height: 1.2
+			line-height: 19px
 			color: #fbfbfb
 			font-weight: 300
+			+media(md)
+				color: #292929
+				font-weight: 400
+			+media(xs)
+				font-size: 14px
+				line-height: 16.5px
 			&:not(:last-child)
 				padding-bottom: 1.2em
 
@@ -89,7 +122,7 @@
 	&__list
 		display: none
 		width: calc(100% + 60px)
-		top: 100%
+		top: calc(100% + 10px)
 		left: -30px
 		z-index: 8
 		position: absolute
@@ -101,7 +134,7 @@
 		overflow-x: hidden
 		li:not(:last-child)
 			.about__link
-				border-bottom: 1px solid #fff
+				border-bottom: 1px solid #ccc
 				
 	&__link
 		display: block
@@ -109,4 +142,3 @@
 		color: #fbfbfb
 		padding: 12px 0
 		padding-left: 30px
-	

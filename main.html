@@ -5,16 +5,28 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 	<title>Fashion VS Marketing — маркетингова агенція для фешн брендів.</title>
 
-	<link rel="stylesheet" href="fonts/fonts.css">
+	<!--<link rel="stylesheet" href="fonts/fonts.css">-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" href="css/swiper-bundle.min.css">
-	<link rel="stylesheet" href="css/style.css">
+	<link rel="stylesheet" href="style.css">
 </head>
+
 
 <body>
 
 <div class="circle-cursor circle-cursor__inner"></div>
 <div class="circle-cursor circle-cursor__outer"></div>
 
+<div id="text">
+	<div class="text--title"></div>
+	<p class="text--tags"></p>
+</div>
+<style>
+	.swiper-slide.about {
+		background-image: url(img/bg-about.png);
+	}
+</style>
 <div class="holder">
 
 	<div class="wrap" id="slider">
@@ -35,19 +47,19 @@
 									        </div>
 									    </div>
 									    <ul class="about__list">
-									        <li>
-									          <a class="about__link main-header__link--active hover__block" href="#about" data-index="0">Про проект</a>
-									        </li>
-									        <li>
-									         <a class="about__link hover__block" href="#services"  data-index="1">Послуги</a>
-									        </li>
-									        <li>
-									          <a class="about__link hover__block" href="#photo"  data-index="2">Портфоліо</a>
-									        </li>
-									        <li>
-									          <a class="about__link hover__block" href="#contacts"  data-index="3">Контакти</a>
-									        </li>
-									    </ul>
+											<li>
+												<a class="about__link hover__block" href="">Про проект</a>
+											</li>
+											<li>
+												<a class="about__link hover__block" href="">Послуги</a>
+											</li>
+											<li>
+												 <a class="about__link hover__block" href="">Портфоліо</a>
+											</li>
+											<li>
+												<a class="about__link hover__block" href="">Контакти</a>
+											</li>
+										</ul>
 								    </div>
 								</div><!--end about__inner-->
 								
@@ -73,22 +85,56 @@
 						<div class="services__wrap">
 							<div class="services__box">
 								<ul class="services__list">
-									<li><a href="" class="services__link hover__block" style="background-image: url(img/icons/brend.png)">Бренд стратегія</a></li>
-									<li><a href="" class="services__link hover__block" style="background-image: url(img/icons/shop.png)">Онлайн магазин</a></li>
-									<li><a href="" class="services__link hover__block" style="background-image: url(img/icons/marketing.png)">Аутсорс відділ маркетінгу</a></li>
-									<li><a href="" class="services__link hover__block" style="background-image: url(img/icons/media.png)">Фото та видео продакшн</a></li>
+									<li><a href="" class="services__link services__link--active hover__block" style="background-image: url(img/icons/brend.png)" data-tab="42">Бренд стратегія</a></li>
+									<li><a href="" class="services__link hover__block" style="background-image: url(img/icons/shop.png)" data-tab="43">Онлайн магазин</a></li>
+									<li><a href="" class="services__link hover__block" style="background-image: url(img/icons/marketing.png)" data-tab="44">Аутсорс відділ маркетінгу</a></li>
+									<li><a href="" class="services__link hover__block" style="background-image: url(img/icons/media.png)" data-tab="45">Фото та видео продакшн</a></li>
 								</ul>
 							</div>
-							<div class="services__box services__box--content">
-								<ul>
-									<li>кастомізований дизайн</li>
-									<li>верстка</li>
-									<li>модерація</li>
-									<li>підключення платіжної системи</li>
-									<li>інтеграція системи обліку та систем збору інформації </li>
-								</ul>
-								<button class="btn btn--details hover__block">Дізнатись більше</button>
-							</div>
+							<div class="services__box services__box--aside">
+                            	<div class="services__box--content tab-42">
+                            		<ul>
+										<li>аналіз сегмента ринку і конкуренті</li>
+										<li>проведення кількісного і якісного аналізу серед споживачів</li>
+										<li>визначення ЦА аудиторії, портрета ключового клієнта</li>
+										<li>формування центральної ідеї бренду, позиціонування</li>
+										<li>визначення візуального та комунікаційного коду бренду</li>
+										<li>розробка логотипу та айдентики на основі сформованої концепції</li>
+									</ul>
+									<a href="http://fvsm/service/brand-strategy/" class="btn btn--details hover__block">Дізнатись більше</a>
+            					</div>
+            					<div class="services__box--content services__box--hidden tab-43">
+            						<ul>
+										<li>верстка</li>
+										<li>модерація</li>
+										<li>підключення платіжної системи</li>
+										<li>інтеграція системи обліку та систем збору інформації</li>
+									</ul>
+									<a href="http://fvsm/service/online-store/" class="btn btn--details hover__block">Дізнатись більше</a>
+            					</div>
+            					<div class="services__box--content services__box--hidden tab-44">
+            						<ul>
+										<li>стратегія просування</li>
+										<li>smm</li>
+										<li>digital маркетинг</li>
+										<li>робота з українськими та іноземними шоу румами та маркетплейсами, ЗМІ, блогерами та стилістами</li>
+										<li>дизайн</li>
+										<li>аналітика і рекомендації щодо подальшого розвитку бренд</li>
+									</ul>
+									<a href="http://fvsm/service/outsourcing-marketing-department/" class="btn btn--details hover__block">Дізнатись більше</a>
+            					</div>
+            					<div class="services__box--content services__box--hidden tab-45">
+            						<ul>
+										<li>ідея та концепція зйомки</li>
+										<li>предметна зйомка</li>
+										<li>зйомка лукбука</li>
+										<li>зйомка кампейну</li>
+										<li>зйомка каталогу</li>
+										<li>зйомка для невидимому манекені (для онлайн магазину)</li>
+									</ul>
+									<a href="http://fvsm/service/photo-and-video-production/" class="btn btn--details hover__block">Дізнатись більше</a>
+            					</div>  
+            				</div>
 						</div><!--end services__wrap-->
 
 
@@ -101,21 +147,21 @@
 					<h3 class="title--mob">Портфолио</h3>
 					<div class="photo__wrap">
 						<div class="photo__item">
-							<a href="" class="photo__image hover__block" >
+							<a href="" class="photo__image photo__image--portrait hover__block" data-title="Ire" data-tag="#strategy #production #onlinestore #pr">
 								<img src="img/photo-1.png" alt="">
 							</a>
 						</div>
 						<div class="photo__item">
-							<a href="" class="photo__image hover__block" >
+							<a href="" class="photo__image photo__image--album hover__block" data-title="FVSM" data-tag="#production">
 								<img src="img/photo-2.png" alt="">
 							</a>
-							<a href="" class="photo__image hover__block" >
+							<a href="" class="photo__image photo__image--portrait hover__block" data-title="C.icon" data-tag="#strategy #production #onlinestore">
 								<img src="img/photo-3.png" alt="">
 							</a>
 						</div>
 						<div class="photo__item">
-							<a href="" class="photo__image hover__block" >
-								<img src="img/photo-4.png" alt="">
+							<a href="" class="photo__image photo__image--portrait hover__block" data-title="Malva Florea" data-tag="#onlinestore">
+								<img src="img/photo-4.png" alt="" >
 							</a>
 						</div>
 					</div><!--end photo__wrap-->

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<title>Fashion VS Marketing — маркетингова агенція для фешн брендів.</title>
+
+	<!--<link rel="stylesheet" href="fonts/fonts.css">-->
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="css/swiper-bundle.min.css">
+	<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="circle-cursor circle-cursor__inner"></div>
+<div class="circle-cursor circle-cursor__outer"></div>
+
+<div id="text"></div>
+
+<div class="holder light__mode">
+
+	<div class="wrap wrap--page">
+
+			<section class="services item single swiper-slide dark-bg">
+				<div class="container">
+					<div class="about__inner about__inner--single">
+						<a href="" class="about__logo">
+							<img src="img/icons/logo.svg" alt="">
+						</a>
+						<div class="about__menu">
+							<div class="mobile-wrap">
+								<div class="main-nav__toggle">
+									 <span class="line-burger"></span>
+								</div>
+							</div>
+							<ul class="about__list">
+								<li>
+									<a class="about__link hover__block" href="">Про проект</a>
+								</li>
+								<li>
+									<a class="about__link hover__block" href="">Послуги</a>
+								</li>
+								<li>
+									 <a class="about__link hover__block" href="">Портфоліо</a>
+								</li>
+								<li>
+									<a class="about__link hover__block" href="">Контакти</a>
+								</li>
+							</ul>
+						</div>
+					</div><!--end about__inner-->
+
+					<div class="single__block single__block--inner">
+						<div class="single__item single__item--desc">
+							<a href="" class="single__title hover__block">malya florea</a>
+							<ul class="single__tags">
+								<li><a href="" class="single__link hover__block">#production</a></li>
+							</ul>
+							<div class="swiper-container single__row">
+								<div class="swiper-wrapper">
+
+									<div class="single__content swiper-slide">
+										<div class="single__elem">
+											<img src="img/photo-28.png" alt="">
+										</div>		
+										<div class="single__elem">
+											<img src="img/photo-29.png" alt="">
+										</div>		
+									</div>
+
+									<div class="single__content swiper-slide">
+										<div class="single__elem">
+											<img src="img/photo-30.png" alt="">
+										</div>	
+										<div class="single__elem">
+											<img src="img/photo-31.png" alt="">
+										</div>	
+									</div>
+								</div><!--end swiper-wrapper-->
+								<button class="single__arrow single__arrow--dir_right hover__block"></button>
+							</div>
+							
+						</div>
+						<div class="single__item single__item--info">
+							<div class="single__text">
+								<h3>Завдання:</h3>
+								<ul>
+									<li>розробити онлайн-магазин</li>
+								</ul>
+								<h3>Зроблено:</h3>
+								<ul>
+									<li>структуровано та оптимізовано повний обсяг інформації про бренд</li>
+									<li>знайдено шаблон, що відповідає технічним завданням магазину</li>
+									<li>намальовано індивідуальний авторський дизайн на основі айдентики і візуального коду бренду</li>
+									<li>проведено предметну зйомку одягу на невидимому манекені</li>
+									<li>здійснено верстку та програмування магазину</li>
+									<li>підключено системи міжнародної оплати та доставки </li>
+								</ul>
+								<h3>Результат:</h3>
+								<ul>
+									<li>запуск онлайн-магазину</li>
+								</ul>
+							</div>
+							<button class="btn btn--order hover__block">Теж таке хочу</button>
+
+						</div>
+					</div><!--end services__block-->
+				</div>
+			</section>
+	</div>
+
+	<div class="aside">
+		<ul class="aside__list">
+			<li class="aside__link hover__block" data-number="0">Про проект</li>
+			<li class="aside__link hover__block" data-number="1">Послуги</li>
+			<li class="aside__link aside__link--active hover__block" data-number="2">Портфолио</li>
+			<li class="aside__link hover__block" data-number="3">Контакты</li>
+		</ul>
+	</div>
+
+</div>
+
+<div class="overlay overlay-request">
+	<div class="inner-overlay">
+		<button class="overlay-close hover__block"></button>
+		<div class="inner__box">  
+		    <h3 class="overlay__subtitle">Зв’язатись з нами</h3>
+		    <form action="">
+				<div class="contacts__wrap-error">
+					<p class="contacts__fail contacts__fail-name" style="display: none">Некоректне ім'я</p>
+					<p class="contacts__fail contacts__fail-phone" style="display: none">Некоректний номер телефону</p>
+				</div>
+				<div class="contacts__wrap">
+					<div class="contacts__item">
+						<input type="text" class="input input--popup" id="p_name">
+						<label for="p_name" class="contacts__label">Ім’я*</label>
+					</div>
+					<div class="contacts__item">
+						<input type="tel" class="input input--popup" id="p_phone">
+						<label for="p_phone" class="contacts__label">Телефон*</label>
+					</div>
+					<div class="contacts__item">
+						<input type="text" class="input input--popup" id="p_email">
+						<label for="p_email" class="contacts__label">Email</label>
+					</div>
+				</div>
+				<button id="btn--popup" class="btn btn--send hover__block">Передзвоніть мені</button>
+			</form>
+	    </div>
+	</div>
+</div>
+
+
+	<script src="js/jquery-3.1.1.min.js"></script>
+	<script src="js/jquery.maskedinput.min.js"></script>
+	<script src="js/swiper-bundle.min.js"></script>
+	<script src="js/main.js"></script>
+
+</body>
+</html>

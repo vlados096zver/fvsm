@@ -15,32 +15,34 @@
 	position: absolute
 	top: 50%
 	left: 0
-	width: 25px
+	width: 22px
 	height: 2px
 	background-color: #fff
 	transition: 0.5s width
+
 	&:after,
 	&:before
 		content: ''
 		position: absolute
-		width: 25px
+		width: 22px
 		height: 2px
 		background-color: #fff
 		left: 0
-		transition: 0.5s
+		transition: 0.5s transform, 0.5s transform-origin, 0.5s top, 0.5s bottom
+
 	&:after
-		top: calc(100% + 8px)
+		top: calc(100% + 6px)
 	&:before
-		bottom: calc(100% + 8px)
+		bottom: calc(100% + 6px)
 
 .line-active
 	width: 0
 	&:after
-		top: 9px
+		top: 8px
 		transform: rotate(-45deg)
 		transform-origin: 0 0
 	&:before
-		bottom: 9px
+		bottom: 8px
 		transform: rotate(45deg)
 		transform-origin: 0 100%
 
@@ -48,7 +50,7 @@
 	position: relative
 	cursor: pointer
 	display: none
-	width: 25px
+	width: 22px
 	height: 25px
 	+media(lgxs)
 		display: block
