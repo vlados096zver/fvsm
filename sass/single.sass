@@ -143,7 +143,7 @@
 		min-width: 160px
 		+media(lgm)
 			position: static
-			width: calc(100% / 2 - 40px)
+			//width: calc(100% / 2 - 40px)
 			margin: 0 auto
 			margin-bottom: 60px
 
@@ -153,19 +153,55 @@
 			margin-bottom: 60px
 
 		&:first-child
-			max-width: 40%
+			max-width: 51%
 			top: 5%
 			right: 0px
+			+media(lgm)
+				position: static
+				max-width: initial
+
+
 
 		&:nth-child(2)
-			max-width: 38%
+			max-width: 39%
 			top: 29%
 			left: 0px
+			+media(lgm)
+				position: static
+				max-width: initial
 
 		&:nth-child(3)
-			max-width: 38%
+			max-width: 39%
 			bottom: 0px
 			right: 60px
+			+media(lgm)
+				position: static
+				max-width: initial
+
+		&.single__col--first
+			max-width: 44%
+			+media(lgm)
+				position: static
+				max-width: initial
+
+		&.single__col--second
+			max-width: 38%
+			+media(lgm)
+				position: static
+				max-width: initial
+
+		&.single__col--third
+			max-width: 42%
+			+media(lgm)
+				position: static
+				max-width: initial
+
+		&.single__col--fourth
+			max-width: 43%
+			+media(lgm)
+				position: static
+				max-width: initial
+
 		img
 			display: block
 			width: 100%

@@ -1288,21 +1288,29 @@ img {
 }
 
 .single__col:first-child {
-	max-width: 40%;
+	max-width: 51%;
 	top: 5%;
 	right: 0px;
 }
 
 .single__col:nth-child(2) {
-	max-width: 38%;
+	max-width: 39%;
 	top: 29%;
 	left: 0px;
 }
 
 .single__col:nth-child(3) {
-	max-width: 38%;
+	max-width: 39%;
 	bottom: 0px;
 	right: 60px;
+}
+
+.single__col.single__col--first {
+	max-width: 44%;
+}
+
+.single__col.single__col--second {
+	max-width: 38%;
 }
 
 .single__col img {
@@ -1634,9 +1642,33 @@ img {
 
 .single__col {
 	position: static;
-	width: calc(100% / 2 - 40px);
 	margin: 0 auto;
 	margin-bottom: 60px;
+}
+
+.single__col:first-child {
+	position: static;
+	max-width: initial;
+}
+
+.single__col:nth-child(2) {
+	position: static;
+	max-width: initial;
+}
+
+.single__col:nth-child(3) {
+	position: static;
+	max-width: initial;
+}
+
+.single__col.single__col--first {
+	position: static;
+	max-width: initial;
+}
+
+.single__col.single__col--second {
+	position: static;
+	max-width: initial;
 }
 
 .single__col img {
