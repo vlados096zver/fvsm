@@ -1,7 +1,7 @@
 @import 'responsive'
 
 .contacts
-	padding-top: 90px	
+	padding-top: 60px	
 	+media(lgxs)
 		padding-top: 30px
 		padding-bottom: 30px
@@ -10,7 +10,7 @@
 		line-height: 1.2
 		color: #afafaf
 		text-transform: uppercase
-		padding-bottom: 45px
+		padding-bottom: 32px
 		font-weight: normal
 		+media(sm)
 			font-size: 20px
@@ -39,9 +39,9 @@
 		width: calc(50% - 30px)
 		position: relative
 		margin: 0 15px
-		margin-bottom: 50px
+		margin-bottom: 32px
 		&:last-child
-			margin-bottom: 64px
+			margin-bottom: 48px
 			+media(sm)
 				margin-bottom: 48px
 		+media(sm)
@@ -55,13 +55,20 @@
 		left: 0px
 		font-size: 16px
 		pointer-events: none
-		color: #292929
+		color: #afafaf
 		transition: 0.3s
+		font-weight: 400
 		&.label-active
 			font-size: 14px
 			top: -20px
 			+media(sm)
 				top: -10px
+
+	&__list
+		display: flex
+		align-items: center
+		li:not(:last-child)
+			margin-right: 48px
 
 	&__link
 		display: inline-block

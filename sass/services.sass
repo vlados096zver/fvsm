@@ -1,8 +1,8 @@
 @import 'responsive'
 
 .services
-	padding-top: 90px
-	padding-bottom: 20px
+	padding-top: 50px
+	padding-bottom: 40px
 	+media(lgxs)
 		padding-top: 45px
 	+media(lgxs)
@@ -76,20 +76,22 @@
 	&__list
 		display: flex
 		flex-direction: column
+		li:last-child .services__link
+			margin-bottom: 0px
 
 	&__link
 		position: relative
 		cursor: pointer
 		display: inline-block
-		font-size: 60px
+		font-size: 48px
 		line-height: 1.2
 		color: #292929
 		background-repeat: no-repeat
-		background-position: left center
+		background-position: top 15px left
 		text-decoration: none
 		padding: 5px 0
-		padding-left: 100px
-		margin-bottom: 45px
+		padding-left: 76px
+		margin-bottom: 32px
 		transition: 0.3s color
 		+media(lgs)
 			font-size: 42px

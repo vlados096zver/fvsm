@@ -2,7 +2,7 @@
 
 .photo
 	position: relative
-	padding-top: 90px
+	padding-top: 80px
 	padding-right: 65px
 	padding-bottom: 0px
 	+media(lgxs)
@@ -12,7 +12,6 @@
 		z-index: 3
 		display: flex
 		flex-wrap: wrap
-		padding-top: 30px
 		margin: 0 -10px
 		+media(mdx)
 			flex-direction: column
@@ -26,7 +25,7 @@
 		+media(mdx)
 			width: auto
 		&:last-child
-			flex: 2
+			flex: 1.8
 			img
 				margin-left: auto
 
@@ -40,10 +39,15 @@
 			.photo__image:first-child
 				position: relative
 				left: 110px
+				+media(lg)
+					left: 90px
 				+media(lgs)
 					left: 50px
 				+media(mdx)
 					left: initial
+
+			.photo__image:last-child
+				margin-bottom: 0px
 
 			
 

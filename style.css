@@ -454,8 +454,10 @@ img {
 .item {
 	position: relative;
 	width: 100%;
+	display: flex;
+	align-items: center;
 	padding: 50px 175px;
-	padding-top: 20vh;
+	padding-bottom: 30px;
 	overflow-y: auto;
 	overflow-x: visible;
 }
@@ -644,14 +646,12 @@ img {
 .btn--details {
 	max-width: 160px;
 	position: relative;
-	top: -4px;
 	margin-left: auto;
-	margin-top: auto;
 }
 
 .btn--send {
 	max-width: 172px;
-	margin-bottom: 100px;
+	margin-bottom: 65px;
 }
 
 .btn--send[disabled] {
@@ -812,8 +812,8 @@ img {
 }
 
 .services {
-	padding-top: 90px;
-	padding-bottom: 20px;
+	padding-top: 50px;
+	padding-bottom: 40px;
 }
 
 .services--mob .title--mob {
@@ -873,19 +873,23 @@ img {
 	flex-direction: column;
 }
 
+.services__list li:last-child .services__link {
+	margin-bottom: 0px;
+}
+
 .services__link {
 	position: relative;
 	cursor: pointer;
 	display: inline-block;
-	font-size: 60px;
+	font-size: 48px;
 	line-height: 1.2;
 	color: #292929;
 	background-repeat: no-repeat;
-	background-position: left center;
+	background-position: top 15px left;
 	text-decoration: none;
 	padding: 5px 0;
-	padding-left: 100px;
-	margin-bottom: 45px;
+	padding-left: 76px;
+	margin-bottom: 32px;
 	transition: 0.3s color;
 }
 
@@ -1010,7 +1014,7 @@ img {
 
 .photo {
 	position: relative;
-	padding-top: 90px;
+	padding-top: 80px;
 	padding-right: 65px;
 	padding-bottom: 0px;
 }
@@ -1020,7 +1024,6 @@ img {
 	z-index: 3;
 	display: flex;
 	flex-wrap: wrap;
-	padding-top: 30px;
 	margin: 0 -10px;
 }
 
@@ -1031,7 +1034,7 @@ img {
 }
 
 .photo__item:last-child {
-	flex: 2;
+	flex: 1.8;
 }
 
 .photo__item:last-child img {
@@ -1049,6 +1052,10 @@ img {
 .photo__item:nth-child(2n+2) .photo__image:first-child {
 	position: relative;
 	left: 110px;
+}
+
+.photo__item:nth-child(2n+2) .photo__image:last-child {
+	margin-bottom: 0px;
 }
 
 .photo__image {
@@ -1105,7 +1112,7 @@ img {
 }
 
 .contacts {
-	padding-top: 90px;
+	padding-top: 60px;
 }
 
 .contacts__title {
@@ -1113,7 +1120,7 @@ img {
 	line-height: 1.2;
 	color: #afafaf;
 	text-transform: uppercase;
-	padding-bottom: 45px;
+	padding-bottom: 32px;
 	font-weight: normal;
 }
 
@@ -1136,11 +1143,11 @@ img {
 	width: calc(50% - 30px);
 	position: relative;
 	margin: 0 15px;
-	margin-bottom: 50px;
+	margin-bottom: 32px;
 }
 
 .contacts__item:last-child {
-	margin-bottom: 64px;
+	margin-bottom: 48px;
 }
 
 .contacts__label {
@@ -1149,13 +1156,23 @@ img {
 	left: 0px;
 	font-size: 16px;
 	pointer-events: none;
-	color: #292929;
+	color: #afafaf;
 	transition: 0.3s;
+	font-weight: 400;
 }
 
 .contacts__label.label-active {
 	font-size: 14px;
 	top: -20px;
+}
+
+.contacts__list {
+	display: flex;
+	align-items: center;
+}
+
+.contacts__list li:not(:last-child) {
+	margin-right: 48px;
 }
 
 .contacts__link {
@@ -1578,6 +1595,10 @@ img {
 .services__item {
 	width: calc(50% - 60px);
 	margin: 0 30px;
+}
+
+.photo__item:nth-child(2n+2) .photo__image:first-child {
+	left: 90px;
 }
 
 }
