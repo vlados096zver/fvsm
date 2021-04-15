@@ -888,6 +888,7 @@ img {
 	line-height: 1.2;
 	color: #292929;
 	background-repeat: no-repeat;
+	background-size: 40px;
 	background-position: top 15px left;
 	text-decoration: none;
 	padding: 5px 0;
@@ -1988,19 +1989,19 @@ body {
 }
 
 .services__title--brend {
-	background-image: url(img/icons/brend.png);
+	background-image: url(img/icons/brend.svg);
 }
 
 .services__title--shop {
-	background-image: url(img/icons/shop.png);
+	background-image: url(img/icons/shop.svg);
 }
 
 .services__title--marketing {
-	background-image: url(img/icons/marketing.png);
+	background-image: url(img/icons/marketing.svg);
 }
 
 .services__title--media {
-	background-image: url(img/icons/media.png);
+	background-image: url(img/icons/media.svg);
 }
 
 .photo {
@@ -2040,6 +2041,10 @@ body {
 
 .photo__item:nth-child(2n+2) .photo__image:first-child {
 	left: initial;
+}
+
+.photo__item:nth-child(2n+2) .photo__image:last-child {
+	margin-bottom: 55px;
 }
 
 .photo__image {
@@ -2228,11 +2233,11 @@ body {
 }
 
 .photo__image--album {
-	max-width: 260px;
+	max-width: 298px !important;
 }
 
 .photo__image--portrait {
-	max-width: 170px;
+	max-width: 240px !important;
 }
 
 .contacts__title {
@@ -2278,6 +2283,14 @@ body {
 	width: 100%;
 	margin: 0 auto;
 	margin-bottom: 60px;
+}
+
+.single--album {
+	max-width: 240px !important;
+}
+
+.single--portrait {
+	max-width: 305px !important;
 }
 
 .overlay-close {
