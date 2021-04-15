@@ -8,31 +8,31 @@
 	&__block
 		display: flex
 		flex-wrap: wrap
-		margin-bottom: 50px
+		margin-bottom: 10px
 		+media(lgm)
 			flex-direction: column
 
-		&--portfolio
-			margin-bottom: 0px
-
 		&--inner
-			margin-bottom: 0px
 			.single__item
-				min-height: 850px
+				//min-height: 850px
 				height: calc(100vh - 120px)
+				+media(lgm)
+					height: auto
 
 			.single__row
-				top: -220px
+				top: -302px
+				height: initial
 				+media(lgm)
 					top: initial
 
 			.single__item--desc
-				height: calc(100vh - 120px)
-				+media(lgm)
-					height auto
+				//height: calc(100vh - 120px)
+				//+media(lgm)
+				//	height: auto
 			
 			.single__arrow
-				bottom: 70px
+				//bottom: 70px
+				bottom: 0px
 
 
 			.btn--order
@@ -174,7 +174,7 @@
 
 		&:nth-child(3)
 			max-width: 39%
-			bottom: 0px
+			bottom: -40px
 			right: 60px
 			+media(lgm)
 				position: static
@@ -272,10 +272,11 @@
 			li
 				position: relative
 				font-size: 16px
-				line-height: 1.25
+				line-height: 1.23
 				color: #afafaf
 				padding-left: 25px
-				margin-bottom: 15px
+				margin-bottom: 8px
+				font-weight: 300
 				&:after
 					position: absolute
 					content: ' '
@@ -334,6 +335,9 @@
 				width: auto
 				margin: 0 auto
 				margin-bottom: 40px
+
+		.single__elem:last-child
+			display: none
 
 		&:last-child
 			.single__col:last-child
@@ -394,9 +398,11 @@
 
 	&__pic
 		display: flex	
-		margin-top: 230px	
+		align-items: center
+		position: relative
+		top: 230px	
 		+media(lgm)
-			margin-top: 0px	
+			top: 0px	
 			flex-direction: column
 
 	&__point
@@ -408,10 +414,13 @@
 				padding-right: 0px	
 				margin-bottom: 60px	
 
-		&:last-child
+		&:nth-child(2)
 			width: calc(100% - 385px)
 			+media(lgm)
 				width: auto
+
+		&:last-child
+			display: none
 
 		img
 			display: block	
