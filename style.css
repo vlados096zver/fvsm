@@ -1863,6 +1863,7 @@ body {
 
 .about {
 	display: flex;
+	align-items: initial;
 	padding-top: 25px;
 	min-height: 100vh;
 }
