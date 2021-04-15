@@ -454,12 +454,15 @@ img {
 .item {
 	position: relative;
 	width: 100%;
-	display: flex;
-	align-items: center;
 	padding: 50px 175px;
 	padding-bottom: 30px;
 	overflow-y: auto;
 	overflow-x: visible;
+}
+
+.item--main {
+	display: flex;
+	align-items: center;
 }
 
 .title--mob {
@@ -955,11 +958,11 @@ img {
 
 .services__item--desc ul li {
 	position: relative;
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 1.25;
 	color: #afafaf;
 	padding-left: 40px;
-	margin-bottom: 14px;
+	margin-bottom: 11px;
 	font-weight: 300;
 }
 
@@ -977,7 +980,7 @@ img {
 	cursor: pointer;
 	display: inline-block;
 	position: relative;
-	font-size: 60px;
+	font-size: 48px;
 	color: #fbfbfb;
 	line-height: 1.2;
 	background-repeat: no-repeat;
@@ -1001,11 +1004,11 @@ img {
 }
 
 .services__text {
-	margin-bottom: 30px;
+	margin-bottom: 2px;
 }
 
 .services__text p {
-	font-size: 24px;
+	font-size: 20px;
 	line-height: 1.25;
 	color: #afafaf;
 	padding-bottom: 1em;
@@ -1205,6 +1208,10 @@ img {
 	margin-bottom: 50px;
 }
 
+.single__block--portfolio {
+	margin-bottom: 0px;
+}
+
 .single__block--inner {
 	margin-bottom: 0px;
 }
@@ -1233,7 +1240,6 @@ img {
 .single__item--info {
 	width: 390px;
 	padding-left: 85px;
-	padding-top: 10px;
 }
 
 .single__item--desc {
@@ -1612,7 +1618,7 @@ img {
 }
 
 .services__title {
-	font-size: 42px;
+	font-size: 40px;
 }
 
 .services__title:after {
@@ -1991,10 +1997,6 @@ body {
 
 .services__title--media {
 	background-image: url(img/icons/media.png);
-}
-
-.services__text p {
-	font-size: 21px;
 }
 
 .photo {
