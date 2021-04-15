@@ -333,7 +333,7 @@ $('.btn--decor').on('click', function() {
 });
 
 $('.services__link').on('hover mouseenter', function() {
-    if($(window).width() > 950) {
+    if($(window).width() > 960) {
         var tab = $(this).data('tab');
         $('.services__link').removeClass('services__link--active');
         $('.services__box--content').addClass('services__box--hidden');
