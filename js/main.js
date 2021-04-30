@@ -25,7 +25,7 @@ $(function () {
     $(elem).next().hide(300);
     $(elem).removeClass('active');
    })
-   $(this).next().toggle(300);
+   $(this).next().slideToggle(300);
    $(this).addClass('active');
   });
 });

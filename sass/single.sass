@@ -199,6 +199,7 @@
 				margin: 0 auto
 
 	&__text
+		padding-bottom: 10px
 		h3
 			user-select: none
 			position: relative
@@ -206,11 +207,11 @@
 			line-height: 1.2
 			color: #fbfbfb
 			padding-left: 28px
-			margin-bottom: 18px
+			margin-bottom: 29px
 			font-weight: normal
 			+media(mdx)
 				font-size: 20px
-				margin-bottom: 17px
+				margin-bottom: 15px
 			&:after,
 			&:before
 				position: absolute
@@ -244,6 +245,9 @@
 				&:before
 					opacity: 0
 
+			&:nth-last-child(2)
+				margin-bottom: 22px
+
 		p
 			font-size: 16px
 			line-height: 1.25
@@ -254,7 +258,7 @@
 				font-size: 14px
 
 		ul
-			padding-bottom: 25px
+			padding-bottom: 20px
 			+media(lgm)
 				padding-bottom: 10px
 			li
@@ -275,7 +279,8 @@
 					background-color: #afafaf
 					border-radius: 50%
 
-
+			&:last-child
+				padding-bottom: 14px
 	&__inner
 		&+button
 			position: static

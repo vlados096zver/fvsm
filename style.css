@@ -693,7 +693,6 @@ img {
 	display: block;
 	color: #afafaf;
 	border-color: #afafaf;
-	margin-top: 10px;
 }
 
 .about {
@@ -1323,6 +1322,10 @@ img {
 	width: 100%;
 }
 
+.single__text {
+	padding-bottom: 10px;
+}
+
 .single__text h3 {
 	user-select: none;
 	position: relative;
@@ -1330,7 +1333,7 @@ img {
 	line-height: 1.2;
 	color: #fbfbfb;
 	padding-left: 28px;
-	margin-bottom: 18px;
+	margin-bottom: 29px;
 	font-weight: normal;
 }
 
@@ -1361,6 +1364,10 @@ img {
 	opacity: 0;
 }
 
+.single__text h3:nth-last-child(2) {
+	margin-bottom: 22px;
+}
+
 .single__text p {
 	font-size: 16px;
 	line-height: 1.25;
@@ -1370,7 +1377,7 @@ img {
 }
 
 .single__text ul {
-	padding-bottom: 25px;
+	padding-bottom: 20px;
 }
 
 .single__text ul li {
@@ -1392,6 +1399,10 @@ img {
 	height: 4px;
 	background-color: #afafaf;
 	border-radius: 50%;
+}
+
+.single__text ul:last-child {
+	padding-bottom: 14px;
 }
 
 .single__inner + button {
@@ -2074,7 +2085,7 @@ body {
 
 .single__text h3 {
 	font-size: 20px;
-	margin-bottom: 17px;
+	margin-bottom: 15px;
 }
 
 .single__text h3:after {
