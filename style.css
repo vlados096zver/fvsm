@@ -1330,7 +1330,7 @@ img {
 	line-height: 1.2;
 	color: #fbfbfb;
 	padding-left: 28px;
-	padding-bottom: 18px;
+	margin-bottom: 18px;
 	font-weight: normal;
 }
 
@@ -2074,7 +2074,7 @@ body {
 
 .single__text h3 {
 	font-size: 20px;
-	padding-bottom: 17px;
+	margin-bottom: 17px;
 }
 
 .single__text h3:after {
