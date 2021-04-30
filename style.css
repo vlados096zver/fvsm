@@ -1200,14 +1200,13 @@ img {
 
 .single {
 	padding-right: 60px;
-	padding-top: 35px;
-	padding-bottom: 0px;
+	padding-top: 0px;
+	padding-bottom: 50px;
 }
 
 .single__block {
 	display: flex;
 	flex-wrap: wrap;
-	margin-bottom: 10px;
 }
 
 .single__block--inner .single__item {
@@ -1231,6 +1230,7 @@ img {
 .single__item--desc {
 	width: calc(100% - 390px);
 	position: relative;
+	height: calc(100vh - 152px);
 }
 
 .single__title {
@@ -1641,6 +1641,10 @@ img {
 	top: 17px;
 }
 
+.single.item--main {
+	display: block;
+}
+
 .single__block {
 	flex-direction: column;
 }
@@ -1668,6 +1672,7 @@ img {
 
 .single__item--desc {
 	width: 100%;
+	height: initial;
 }
 
 .single__tags {

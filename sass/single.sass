@@ -2,14 +2,18 @@
 
 .single
 	padding-right: 60px
-	padding-top: 35px
-	padding-bottom: 0px
+	//padding-top: 35px
+	padding-top: 0px
+	padding-bottom: 50px
 	+media(sm)
 		padding-top: 25px
+	&.item--main
+		+media(lgm)	
+			display: block
+
 	&__block
 		display: flex
 		flex-wrap: wrap
-		margin-bottom: 10px
 		+media(lgm)
 			flex-direction: column
 
@@ -55,8 +59,10 @@
 		&--desc
 			width: calc(100% - 390px)
 			position: relative
+			height: calc(100vh - 152px)
 			+media(lgm)
 				width: 100%
+				height: initial
 			+media(mdx)
 				margin-top: 6px
 
