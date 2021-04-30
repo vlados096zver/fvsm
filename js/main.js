@@ -5,7 +5,7 @@ var mh = 0;
 $(".services__box").each(function () {
 var h_block = parseInt($(this).height());
     if(h_block > mh) {
-       mh = h_block;
+        mh = h_block;
     };
 });
 
@@ -14,15 +14,30 @@ $('.mobile-wrap').on('click', function () {
     $('.about__list').slideToggle();
 });
 
+$(function () {
+  let elems =  $(".single__text h3");
+ 
+  $(".single__text h3").on('click', function(e) {
+    if($(this).hasClass('active')) {
+        return;
+    }
+   elems.each(function( index, elem ) {
+    $(elem).next().hide(300);
+    $(elem).removeClass('active');
+   })
+   $(this).next().toggle(300);
+   $(this).addClass('active');
+  });
+});
+
 if ($(window).width() >= 960) {
     $('.about__logo img').attr('src', $('.about__logo').data('white'));
     $('.main__page .about__wrap').removeClass('about__wrap--white');
-     $(".services__box").height(mh);
-
+    $('.services__box').height(mh);
 } else {
     $('.about__logo img').attr('src', $('.about__logo').data('black'));
     $('.main__page .about__wrap').addClass('about__wrap--white');
-    $(".services__box").height('initial');
+    $('.services__box').height('initial');
 }
 
 $(window).resize(function () {
@@ -33,12 +48,12 @@ $(window).resize(function () {
 
     if ($(window).width() >= 960) {
         $('.about__logo img').attr('src', $('.about__logo').data('white'));
-        $('.main__page .about__wrap').removeClass('about__wrap--white'); 
-        $(".services__box").height(mh);
+        $('.main__page .about__wrap').removeClass('about__wrap--white');
+        $('.services__box').height(mh);
     } else {
         $('.about__logo img').attr('src', $('.about__logo').data('black'));
-        $('.main__page .about__wrap').addClass('about__wrap--white'); 
-        $(".services__box").height('initial');
+        $('.main__page .about__wrap').addClass('about__wrap--white');
+        $('.services__box').height('initial');
     }
 
 });
@@ -139,7 +154,7 @@ if ($('.swiper-container').length > 0) {
 
 function initSliderGallery() {
     var screenWidth = $(window).width();
-    if (screenWidth > 1350 && sliderGallery == undefined) {
+    if (screenWidth > 1351 && sliderGallery == undefined) {
         sliderGallery = new Swiper('.swiper-container', {
             loop: true,
             preloadImages: false,
