@@ -1577,6 +1577,11 @@ img {
 	transition: 0.3s border;
 }
 
+.single__arrow--dir_c_icon {
+	bottom: initial;
+	top: 515px;
+}
+
 .single__pic {
 	display: flex;
 	align-items: center;
@@ -2578,7 +2583,7 @@ body {
 }
 
 .single__text ul li {
-	display: inline-block;
+	display: inline;
 	font-size: 14px;
 	padding-left: 0px;
 	margin-bottom: 1px;
