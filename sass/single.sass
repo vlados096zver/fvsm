@@ -95,7 +95,7 @@
 		margin-bottom: 28px
 		font-weight: 400
 		+media(mdx)
-			margin-bottom: 35px
+			margin-bottom: 25px
 		&:after
 			position: absolute
 			content: ' '
@@ -191,10 +191,14 @@
 				max-width: 375px
 			+media(lgm)
 				position: static
+				margin-top: 0px
 				max-width: initial
 
 		&.single__col--top
 			margin-top: 0
+
+		&.single__col--elem
+			margin-top: 124px
 
 		&.single__col--l40
 			margin-left: 40px
@@ -204,6 +208,12 @@
 
 		&.single__col--l60
 			margin-left: 60px
+			+media(lgm)
+				margin: 0 auto
+				margin-bottom: 60px
+
+		&.single__col--l80
+			margin-left: 80px
 			+media(lgm)
 				margin: 0 auto
 				margin-bottom: 60px
@@ -267,6 +277,45 @@
 				max-width: 680px !important
 			+media(sm)
 				max-width: 305px !important
+
+		&.mobile_296w
+			+media(lgm)
+				max-width: 296px !important
+
+		&.mobile_262w
+			+media(lgm)
+				max-width: 262px !important
+
+		&--c_icon--8
+			+media(lgm)
+				order: 2
+
+		&--c_icon--10
+			+media(lgm)
+				order: 3
+
+		&--c_icon--11
+			+media(lgm)
+				order: 4
+
+		&--c_icon--12
+			+media(lgm)
+				order: 5
+
+		&--malya--2
+			+media(lgm)
+				order: -1
+
+		&--malya--3
+			+media(lgm)
+				order: 2
+				margin-top: 60px !important
+				margin-bottom: 0px !important
+
+		&--ire-13
+			display: none
+			+media(lgm)
+				display: block
 
 		// &.single__col--first
 		// 	max-width: 380px
@@ -339,6 +388,8 @@
 			&.active
 				&:before
 					opacity: 0
+					+media(lgm)
+						opacity: 1
 
 			&:nth-last-child(2)
 				margin-bottom: 22px
@@ -355,7 +406,7 @@
 		ul
 			padding-bottom: 20px
 			+media(lgm)
-				padding-bottom: 10px
+				padding-bottom: 25px
 			li
 				position: relative
 				font-size: 16px
@@ -364,6 +415,11 @@
 				padding-left: 25px
 				margin-bottom: 8px
 				font-weight: 300
+				+media(sm)
+					display: inline-block
+					font-size: 14px
+					padding-left: 0px
+					margin-bottom: 1px
 				&:after
 					position: absolute
 					content: ' '
@@ -373,6 +429,8 @@
 					height: 4px
 					background-color: #afafaf
 					border-radius: 50%
+					+media(sm)
+						display: none
 
 			&:last-child
 				padding-bottom: 14px
@@ -402,7 +460,9 @@
 		outline: none
 		height: auto
 		+media(lgm)
-			display: block
+			display: contents
+			-webkit-display: contents
+			-moz-display: contents
 		&--two
 			display: flex
 			align-items: center
@@ -458,11 +518,47 @@
 				+media(lgm)
 					margin-top: 0px
 
+			.single__col:last-child
+				margin-left: -24px
+				+media(lgm)
+					margin-left: auto
+
 		&--block2
 			.single__col:first-child
 				margin-top: 220px
 				+media(lgm)
 					margin-top: 0px
+
+			.single__col:last-child
+				margin-left: 20px
+				+media(lgm)
+					margin-left: auto
+
+		&--block
+			.single__col:first-child
+				margin-top: 172px
+				+media(lgm)
+					margin-top: 0px
+
+		&--image
+			.single__col:first-child img
+				height: 100%
+				+media(lgm)
+					height: auto
+
+		&--invert
+			+media(lgm)
+				display: flex
+				flex-direction: column-reverse
+
+			&:last-child
+				.single__col:first-child
+					+media(lgm)
+						margin-bottom: 0px
+
+				.single__col:last-child
+					+media(lgm)
+						margin-bottom: 60px
 
 
 	&__arrow

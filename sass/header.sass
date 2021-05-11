@@ -18,7 +18,7 @@
 	width: 22px
 	height: 2px
 	background-color: #fff
-	transition: 0.5s width
+	//transition: 0.5s width
 
 	&:after,
 	&:before
@@ -37,6 +37,7 @@
 
 .line-active
 	width: 0
+	background-color: #292929
 	&:after
 		top: 8px
 		transform: rotate(-45deg)
@@ -45,6 +46,10 @@
 		bottom: 8px
 		transform: rotate(45deg)
 		transform-origin: 0 100%
+
+	&:after,
+	&:before
+		background-color: #292929
 
 .main-nav__toggle
 	position: relative
