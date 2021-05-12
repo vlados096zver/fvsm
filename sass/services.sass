@@ -6,7 +6,7 @@
 	+media(lgxs)
 		padding-top: 25px
 	+media(lgxs)
-		padding-bottom: 40px
+		padding-bottom: 55px
 	&--mob
 		+media(lgxs)
 			height: 100vh
@@ -80,6 +80,9 @@
 		flex-direction: column
 		li:last-child .services__link
 			margin-bottom: 0px
+		li
+			+media(sm)
+				text-align: center
 
 	&__link
 		position: relative
@@ -103,6 +106,9 @@
 			padding-left: 60px
 			background-size: 30px
 			margin-bottom: 20px
+		+media(sm)
+			background-image: none !important
+			padding-left: 0px
 
 		&--active
 			text-decoration: underline

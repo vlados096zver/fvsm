@@ -2219,7 +2219,7 @@ body {
 }
 
 .services {
-	padding-bottom: 40px;
+	padding-bottom: 55px;
 }
 
 .services--mob {
@@ -2494,6 +2494,15 @@ body {
 
 .btn--send {
 	margin-bottom: 50px;
+}
+
+.services__list li {
+	text-align: center;
+}
+
+.services__link {
+	background-image: none !important;
+	padding-left: 0px;
 }
 
 .services__item--info ul li {
