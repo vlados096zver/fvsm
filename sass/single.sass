@@ -165,24 +165,17 @@
 		min-width: 160px
 		+media(lgm)
 			position: static
-			//width: calc(100% / 2 - 40px)
 			margin: 0 auto
-			margin-bottom: 60px
-
-		+media(sm)
-			width: 100%
-			margin: 0 auto
-			margin-bottom: 60px
+			margin-bottom: 48px
 
 		&:first-child
-			//max-width: 51%
 			max-width: 304px
 			margin-top: 164px
 			margin-right: 80px
 			+media(lgm)
 				position: static
 				max-width: initial
-				margin: 0 auto 60px
+				margin: 0 auto 48px
 
 		&:nth-child(2)
 			max-width: 416px
@@ -194,77 +187,121 @@
 				margin-top: 0px
 				max-width: initial
 
-		&.single__col--top
-			margin-top: 0
+		&.single__col
+			&--top
+				margin-top: 0
 
-		&.single__col--elem
-			margin-top: 124px
+			&--top_40
+				margin-top: 40px
 
-		&.single__col--l40
-			margin-left: 40px
-			+media(lgm)
-				margin: 0 auto
-				margin-bottom: 60px
+			&--top_80
+				margin-top: 80px
 
-		&.single__col--l60
-			margin-left: 60px
-			+media(lgm)
-				margin: 0 auto
-				margin-bottom: 60px
+			&--elem
+				margin-top: 124px
 
-		&.single__col--l80
-			margin-left: 80px
-			+media(lgm)
-				margin: 0 auto
-				margin-bottom: 60px
+			&--l40
+				margin-left: 40px
+				+media(lgm)
+					margin: 0 auto
+					margin-bottom: 48px
 
-		&.single__col--l70
-			margin-left: 70px
-			+media(lgm)
-				margin: 0 auto
-				margin-bottom: 60px
+			&--l60
+				margin-left: 60px
+				+media(lgm)
+					margin: 0 auto
+					margin-bottom: 48px
 
-		&.single__col--w297
-			max-width: 297px
-			+media(lg)
+			&--l70
+				margin-left: 70px
+				+media(lgm)
+					margin: 0 auto
+					margin-bottom: 48px
+
+			&--l75
+				margin-left: 75px
+				+media(lgm)
+					margin: 0 auto
+					margin-bottom: 48px
+
+			&--l80
+				margin-left: 80px
+				+media(lgm)
+					margin: 0 auto
+					margin-bottom: 48px
+
+			&--w264
+				max-width: 264px
+
+			&--w295
+				max-width: 295px
+				+media(lg)
+					max-width: 295px
+
+			&--w297
 				max-width: 297px
+				+media(lg)
+					max-width: 297px
 
-		&.single__col--w264
-			max-width: 264px
+			&--w300
+				max-width: 300px
 
-		&.single__col--w312
-			max-width: 312px
+			&--w309
+				max-width: 309px
 
-		&.single__col--w300
-			max-width: 300px
+			&--w312
+				max-width: 312px		
 
-		&.single__col--w320
-			max-width: 320px
+			&--w320
+				max-width: 320px
 
-		&.single__col--w337
-			max-width: 337px
-			+media(lg)
+			&--w337
 				max-width: 337px
+				+media(lg)
+					max-width: 337px
 
-		&.single__col--w350
-			max-width: 350px
-			+media(lg)
+			&--w350
 				max-width: 350px
+				+media(lg)
+					max-width: 350px
 
-		&.single__col--w380
-			max-width: 380px
+			&--w355
+				max-width: 355px
+				+media(lg)
+					max-width: 350px
 
-		&.single__col--w405
-			max-width: 405px
+			&--w380
+				max-width: 380px
 
-		&.single__col--w490
-			max-width: 490px
+			&--w405
+				max-width: 405px
 
-		&.single__col--w517
-			max-width: 517px
+			&--w416
+				max-width: 416px
 
-		&.single__col--w570
-			max-width: 570px
+			&--w491
+				max-width: 491px
+
+			&--w492
+				max-width: 492px
+
+			&--w517
+				max-width: 517px
+
+			&--w540
+				max-width: 540px
+				+media(lg)
+					max-width: 500px
+
+			&--w570
+				max-width: 570px
+				+media(lg)
+					max-width: 500px
+
+			&--w630
+				max-width: 630px
+				+media(lg)
+					max-width: 500px
 
 		&.single--album
 			+media(lgm)
@@ -316,6 +353,9 @@
 			display: none
 			+media(lgm)
 				display: block
+
+		&.align-self_end
+			align-self: flex-end
 
 		// &.single__col--first
 		// 	max-width: 380px
@@ -506,6 +546,11 @@
 				+media(lgm)
 					margin-right: auto
 
+			.single__col:last-child
+				margin-right: -20px
+				+media(lgm)
+					margin-right: auto
+
 		&--inner45
 			.single__col:first-child
 				margin-right: 45px
@@ -519,7 +564,7 @@
 					margin-top: 0px
 
 			.single__col:last-child
-				margin-left: -24px
+				margin-left: -90px
 				+media(lgm)
 					margin-left: auto
 
@@ -530,7 +575,7 @@
 					margin-top: 0px
 
 			.single__col:last-child
-				margin-left: 20px
+				margin-left: 40px
 				+media(lgm)
 					margin-left: auto
 
@@ -540,11 +585,11 @@
 				+media(lgm)
 					margin-top: 0px
 
-		&--image
-			.single__col:first-child img
-				height: 100%
-				+media(lgm)
-					height: auto
+		// &--image
+		// 	.single__col:first-child img
+		// 		height: 100%
+		// 		+media(lgm)
+		// 			height: auto
 
 		&--invert
 			+media(lgm)
@@ -565,7 +610,7 @@
 		position: absolute
 		z-index: 5
 		bottom: 2px
-		left: 385px
+		left: 388px
 		display: block
 		cursor: pointer
 		outline: none

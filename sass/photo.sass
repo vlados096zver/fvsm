@@ -2,86 +2,68 @@
 
 .photo
 	position: relative
-	padding-top: 80px
+	padding-top: 0
 	padding-right: 65px
 	padding-bottom: 0px
+	+media(lg)
+		padding-left: 110px
+		padding-right: 10px
 	+media(lgxs)
 		padding-top: 28px
+	+media(mdx)
+		// padding: 28px 10px 0
 	&__wrap
 		position: relative
 		z-index: 3
 		display: flex
 		flex-wrap: wrap
-		margin: 0 -10px
+		align-items: center
+		justify-content: center
 		+media(mdx)
 			flex-direction: column
-			margin: 0px
-			padding: 27px 20px 0
 
 	&__item
-		width: calc(100% / 3 - 20px)
-		margin: 0 10px
-		flex: 1
-		+media(mdx)
-			width: auto
-		&:last-child
-			flex: 1.8
-			img
-				margin-left: auto
+		width: 100%
 
-			.photo__image
-				margin-bottom: 55px
-
-		&:nth-child(2n+2)
-			margin-top: -75px
+		&:nth-child(1)
+			// max-width: 324px
+			max-width: 27%
 			+media(mdx)
-				margin: 0px
-			.photo__image:first-child
-				position: relative
-				left: 110px
-				+media(lg)
-					left: 90px
-				+media(lgs)
-					left: 50px
-				+media(mdx)
-					left: initial
+				max-width: 100%
 
-			.photo__image:last-child
-				margin-bottom: 0px
-				+media(mdx)
-					margin-bottom: 55px
+		&:nth-child(2)
+			// max-width: 415px
+			margin: 0 45px
+			max-width: 34.6%
+			+media(mdx)
+				max-width: 100%
+				margin: 0
+				display: flex
+				flex-direction: column
 
-			
+		&:nth-child(3)
+			// max-width: 326px
+			max-width: 27.17%
+			+media(mdx)
+				display: none
+
 
 	&__image
 		display: block
-		margin-bottom: 40px
 		cursor: none
-		+media(mdx)
-			transform: translateY(-30px)
-			overflow: hidden
-			margin-bottom: 60px
-		+media(sm)
-			margin: 0 auto 60px
-
-		&:last-child
-			max-width: 415px
-			margin-left: auto
-			margin-bottom: 60px
-			+media(lgm)
-				max-width: 365px
-			+media(mdx)
-				max-width: initial
-				margin: 0 auto
-				margin-bottom: 60px
-
+		overflow: hidden
+		background-size: 100%
+		background-position: center
+		transition: 0.3s background
 
 		&:hover	
 			cursor: none !important
+			background-size: 110%
 
 		img
 			display: block
 			width: auto
+			opacity: 0
 			+media(mdx)
 				margin: 0 auto
 
@@ -99,7 +81,42 @@
 			+media(sm)
 				max-width: 240px !important
 
+		&--w293
+			max-width: 293px
+			margin: 0 auto
 
+		&.mobile--w240
+			+media(mdx)
+				max-width: 240px
+				margin: 0 auto 48px
+
+		&.mobile--w255
+			+media(mdx)
+				max-width: 255px
+				margin: 0 auto 48px
+			
+		&.mobile--w293
+			+media(mdx)
+				max-width: 293px
+				margin: 0 auto 48px
+
+		&.display__mobile
+			display: none
+			+media(mdx)
+				display: block
+
+		&.mobile_order--1
+			+media(mdx)
+				order: 1
+
+		&.mobile_order--2
+			+media(mdx)
+				order: 2
+
+		&.mobile_order--3
+			+media(mdx)
+				order: 3
+			
 	&__holder
 		position: relative
 
